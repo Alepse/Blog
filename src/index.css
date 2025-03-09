@@ -1,1 +1,14 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@theme{
+
+     /* colors */
+    --color-1: #181C14;
+    --color-2: #3C3D37;
+    --color-3: #697565;
+    --color-4: #ECDFCC;
+
+    /* font */
+    --font-primary: 'Lato', sans-serif;
+    --font-secondary: 'Big Shoulders Stencil', sans-serif;  
+}
