@@ -25,6 +25,7 @@ const Nav = () => {
     { path: '/', icon: Home, label: 'Home' },
     { path: '/week1', icon: BookOpen, label: 'Week 1' },
     { path: '/week2', icon: Calendar, label: 'Week 2' },
+    { path: '/week3', icon: Calendar, label: 'Week 3' },
   ];
     
   return (

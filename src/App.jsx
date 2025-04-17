@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home'
 import Week1 from './pages/Week1';
 import Week2 from './pages/Week2';
+import Week3 from './pages/Week3';
 
 const App = () => {
   return (
