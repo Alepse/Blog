@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from '../components/Nav';
+import Nav from '../components/nav';
 import Thumbnail from '../assets/ThumbnailWeek2.jpg'
 
 
