@@ -1,14 +1,100 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-@theme{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
 
-     /* colors */
-    --color-1: #181C14;
-    --color-2: #3C3D37;
-    --color-3: #697565;
-    --color-4: #ECDFCC;
+/* Dark theme variables (default) */
+:root {
+    /* Main color palette */
+    --color-1: #E0E0E0; /* Light gray for primary text - improved contrast */
+    --color-2: #A0A0A0; /* Medium gray for secondary elements */
+    --color-3: #666666; /* Medium dark gray for accents and highlights */
+    --color-4: #121212; /* Near black for backgrounds - softer than pure black */
+    --color-5: #333333; /* Dark gray for success/positive elements */
+    --color-6: #888888; /* Medium gray for attention-grabbing elements */
+
+    /* Additional accent colors */
+    --color-accent-1: #444444; /* Dark gray */
+    --color-accent-2: #666666; /* Medium dark gray */
+    --color-accent-3: #888888; /* Medium gray */
+    --color-accent-4: #CCCCCC; /* Light gray */
+
+    /* Semantic colors */
+    --bg-primary: #121212; /* Near black */
+    --bg-secondary: #1E1E1E; /* Dark gray */
+    --bg-tertiary: #2A2A2A; /* Medium dark gray */
+    --text-primary: #E0E0E0; /* Light gray */
+    --text-secondary: #A0A0A0; /* Medium gray */
+    --border-color: #444444; /* Medium dark gray */
+
+    /* Gradients */
+    --gradient-1: linear-gradient(to right, #1E1E1E, #333333);
+    --gradient-2: linear-gradient(to right, #121212, #1E1E1E);
+    --gradient-3: linear-gradient(to right, #333333, #666666);
+    --gradient-4: linear-gradient(135deg, #1E1E1E 0%, #666666 100%);
 
     /* font */
-    --font-primary: 'Lato', sans-serif;
-    --font-secondary: 'Big Shoulders Stencil', sans-serif;  
+    --font-primary: 'Space Grotesk', 'Poppins', sans-serif;
+    --font-secondary: 'Syne', 'Big Shoulders Stencil', sans-serif;
+
+    /* transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* Apply base styles */
+html {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    line-height: 1.6;
+}
+
+/* Typography enhancements */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+/* Improved readability */
+p, li, span, a {
+    color: var(--text-primary);
+}
+
+/* Link styling */
+a {
+    color: var(--color-3);
+    transition: all var(--transition-normal);
+}
+
+a:hover {
+    color: var(--color-accent-2);
+}
+
+/* Custom scrollbar for better UX */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent-2);
 }
