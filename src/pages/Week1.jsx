@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Nav from '../components/nav';
 import WeekNavButton from '../components/WeekNavButton';
-import WeekProgress from '../components/WeekProgress';
 import Footer from '../components/Footer';
 import { Calendar, Clock, User, Tag, ArrowUp, BookOpen, Code, Coffee } from 'lucide-react';
-import Thumbnail from '../assets/ThumbnailWeek1.jpg'
-import pic1 from '../assets/week1.1.jpg'
-import pic2 from '../assets/week1.2.jpg'
-import pic3 from '../assets/week1.3.jpg'
-import pic4 from '../assets/week1.4.jpg'
-import pic5 from '../assets/week1.5.jpg'
+import Thumbnail from '../assets/Week1/ThumbnailWeek1.jpg'
+import pic1 from '../assets/Week1/week1.1.jpg'
+import pic2 from '../assets/Week1/week1.2.jpg'
+import pic3 from '../assets/Week1/week1.3.jpg'
+import pic4 from '../assets/Week1/week1.4.jpg'
+import pic5 from '../assets/Week1/week1.5.jpg'
 
 const Week1 = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -114,8 +113,7 @@ const Week1 = () => {
                   </ul>
                 </div>
 
-                {/* Progress Tracker */}
-                <WeekProgress currentWeek={1} />
+
 
                 {/* Navigation Card */}
                 <div className="bg-bg-secondary p-6 border-l-4 border-t-4 border-color-3 shadow-card">
@@ -234,7 +232,7 @@ const Week1 = () => {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 p-3 bg-color-3 text-bg-primary rounded-full shadow-elevated hover:bg-color-accent-2 transition-all duration-normal hover:scale-110 z-40 border-l-4 border-t-4 border-bg-primary"
+          className="fixed bottom-6 right-6 p-3 bg-color-3 text-bg-primary rounded-full shadow-elevated hover:bg-color-accent-2 transition-all duration-normal hover:scale-110 z-40 border-l-4 border-t-4 border-bg-primary cursor-pointer"
           aria-label="Scroll to top"
         >
           <ArrowUp size={24} />

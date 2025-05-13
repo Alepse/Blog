@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Clock, User, ChevronRight } from 'lucide-react';
-import Thumbnail from '../assets/ThumbnailWeek1.jpg'
-import Thumbnail2 from '../assets/ThumbnailWeek2.jpg';
+import { ArrowRight, Clock, User, Tag, ChevronRight } from 'lucide-react';
+import Thumbnail from '../assets/Week1/ThumbnailWeek1.jpg'
+import Thumbnail2 from '../assets/Week2/ThumbnailWeek2.jpg';
 
 // All 11 weeks of internship
 const posts = [
@@ -118,97 +118,46 @@ const posts = [
   }
 ];
 
-const PostCard = ({ post }) => {
-  const [isHovered, setIsHovered] = useState(false);
+const PostCard = ({ post }) => (
+  <Link
+    to={post.link}
+    className="block bg-bg-secondary h-full flex flex-col border-l-4 border-t-4 border-color-3 overflow-hidden shadow-card transition-all duration-normal hover:scale-105 hover:shadow-2xl hover:brightness-105 focus:scale-105 focus:shadow-2xl focus:brightness-105"
+  >
+    {/* Image container with fixed aspect ratio */}
+    <div className="relative aspect-[16/9] w-full overflow-hidden">
+      <img
+        src={post.image}
+        alt={post.title}
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
 
-  return (
-    <div
-      className="h-full relative group"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <Link
-        to={post.link}
-        className="bg-bg-secondary h-full flex flex-col border-l-2 border-t-2 border-color-3 overflow-hidden shadow-card transition-all duration-normal hover:shadow-elevated focus:shadow-elevated"
-      >
-        {/* Image container with fixed aspect ratio */}
-        <div className="relative aspect-[16/9] w-full overflow-hidden">
-          <img
-            src={post.image}
-            alt={post.title}
-            className={`w-full h-full object-cover transition-transform duration-500 ${isHovered ? 'scale-110' : 'scale-100'}`}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
+      {/* Week badge */}
+      <div className="absolute top-0 right-0 bg-color-3 px-3 py-1 z-10 border-l-4 border-b-4 border-bg-primary">
+        <span className="text-bg-primary text-sm font-bold">
+          {post.week}
+        </span>
+      </div>
 
-          {/* Category tag - darker background for better readability */}
-          <div className="absolute bottom-0 left-0 bg-black/85 px-3 py-1 z-10">
-            <span className="text-white text-xs font-medium flex items-center gap-1">
-              {post.category}
-            </span>
-          </div>
-        </div>
-
-        {/* Title and excerpt section */}
-        <div className="p-4 flex-grow flex flex-col justify-center">
-          <h3 className="text-base md:text-lg font-bold text-color-1 font-secondary mb-2">{post.title}</h3>
-          <p className="text-xs text-color-2 line-clamp-2">{post.excerpt}</p>
-        </div>
-
-        {/* Card footer */}
-        <div className="px-4 py-3 flex items-center justify-between border-t border-color-3/20">
-          <div className="flex items-center gap-1.5">
-            <Clock size={12} className="text-color-3" />
-            <span className="text-xs text-color-2">{post.date}</span>
-          </div>
-          <div className="flex items-center gap-1 text-color-3">
-            <span className="text-xs font-bold">VIEW DETAILS</span>
-            <ArrowRight size={12} />
-          </div>
-        </div>
-      </Link>
-
-      {/* Hover overlay - exactly matching screenshot */}
-      <div
-        className={`absolute inset-0 bg-black/95 z-30 transition-all duration-300 ${
-          isHovered ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}
-      >
-        {/* Simple white border around content */}
-        <div className="absolute inset-4 border border-white/30 pointer-events-none"></div>
-
-        {/* Content container */}
-        <div className="h-full flex flex-col items-center justify-between py-8 px-4">
-          {/* Week number at top */}
-          <div className="text-center">
-            <span className="text-white text-sm font-medium">{post.week}</span>
-          </div>
-
-          {/* Title and excerpt in middle */}
-          <div className="text-center max-w-[90%]">
-            <h3 className="text-2xl font-bold text-white font-secondary mb-3">{post.title}</h3>
-            <p className="text-sm text-white/80">{post.excerpt}</p>
-          </div>
-
-          {/* View details button and date at bottom */}
-          <div className="flex flex-col items-center">
-            <Link
-              to={post.link}
-              className="text-white border border-white/70 px-6 py-2 inline-flex items-center gap-2 hover:bg-white/10 transition-colors mb-4"
-            >
-              <span className="text-sm font-medium">VIEW DETAILS</span>
-              <ArrowRight size={14} />
-            </Link>
-
-            <div className="flex items-center gap-1.5 text-white/60 text-xs">
-              <Clock size={12} />
-              <span>{post.date}</span>
-            </div>
-          </div>
-        </div>
+      {/* Title overlay */}
+      <div className="absolute bottom-0 left-0 right-0 bg-bg-secondary/90 backdrop-blur-sm p-3 border-t-4 border-color-3">
+        <h3 className="text-lg md:text-xl font-bold text-color-1 font-secondary line-clamp-2">{post.title}</h3>
       </div>
     </div>
-  );
-};
+
+    {/* Card footer */}
+    <div className="p-4 flex items-center justify-between bg-bg-secondary">
+      <div className="flex items-center gap-2">
+        <Clock size={16} className="text-color-3" />
+        <span className="text-sm text-color-2">{post.date}</span>
+      </div>
+      <div className="flex items-center gap-1 text-color-3">
+        <span className="text-sm font-bold">VIEW</span>
+        <ArrowRight size={16} />
+      </div>
+    </div>
+  </Link>
+);
 
 const RecentPosts = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);

@@ -251,7 +251,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => window.location.href = '/week1'}
-                className="group flex items-center gap-2 px-4 py-2 text-white border border-white/30 hover:border-white transition-all duration-normal"
+                className="group flex items-center gap-2 px-4 py-2 text-white border border-white/30 hover:border-white transition-all duration-normal cursor-pointer"
               >
                 <span className="font-medium tracking-wide text-xs sm:text-sm">LATEST LOG</span>
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-normal" />
@@ -316,7 +316,7 @@ const Hero = () => {
                       whileHover={{ scale: 1.05, x: -2 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={() => setCurrentWeekIndex(prev => (prev === 0 ? weeks.length - 1 : prev - 1))}
-                      className="text-white/70 text-[10px] sm:text-xs flex items-center gap-1 hover:text-white"
+                      className="text-white/70 text-[10px] sm:text-xs flex items-center gap-1 hover:text-white cursor-pointer"
                     >
                       <ArrowRight size={10} className="rotate-180" />
                       <span>PREV</span>
@@ -326,7 +326,7 @@ const Hero = () => {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={() => window.location.href = weeks[currentWeekIndex].path}
-                      className="bg-color-3 text-black px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-medium flex items-center gap-1"
+                      className="bg-color-3 text-black px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-medium flex items-center gap-1 cursor-pointer"
                     >
                       <span>VIEW WEEK</span>
                       <ArrowRight size={10} />
@@ -336,7 +336,7 @@ const Hero = () => {
                       whileHover={{ scale: 1.05, x: 2 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={() => setCurrentWeekIndex(prev => (prev === weeks.length - 1 ? 0 : prev + 1))}
-                      className="text-white/70 text-[10px] sm:text-xs flex items-center gap-1 hover:text-white"
+                      className="text-white/70 text-[10px] sm:text-xs flex items-center gap-1 hover:text-white cursor-pointer"
                     >
                       <span>NEXT</span>
                       <ArrowRight size={10} />

@@ -138,7 +138,7 @@ const Nav = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-3 transition-all duration-normal text-color-1 hover:bg-bg-tertiary border-l border-t border-transparent hover:border-color-3"
+            className="md:hidden p-3 transition-all duration-normal text-color-1 hover:bg-bg-tertiary border-l border-t border-transparent hover:border-color-3 cursor-pointer"
             aria-label="Toggle mobile menu"
           >
             {isMobileMenuOpen ?
@@ -173,7 +173,7 @@ const Nav = () => {
               <div className="border-b border-color-3/10">
                 <button
                   onClick={() => setIsWeeksDropdownOpen(!isWeeksDropdownOpen)}
-                  className={`flex items-center justify-between w-full px-4 py-3 transition-all duration-normal ${
+                  className={`flex items-center justify-between w-full px-4 py-3 transition-all duration-normal cursor-pointer ${
                     isWeekPage
                       ? 'bg-color-3 text-bg-primary border-l border-t border-white shadow-elevated'
                       : 'text-color-1 hover:bg-bg-tertiary/80 border-l border-transparent hover:border-color-3 hover:text-color-3'

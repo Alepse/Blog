@@ -3,7 +3,7 @@ import Nav from '../components/nav';
 import WeekNavButton from '../components/WeekNavButton';
 import Footer from '../components/Footer';
 import { Calendar, Clock, User, Tag, ArrowUp, BookOpen, Code, Coffee } from 'lucide-react';
-import Thumbnail from '../assets/ThumbnailWeek2.jpg'
+import Thumbnail from '../assets/Week2/ThumbnailWeek2.jpg'
 
 const Week2 = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);

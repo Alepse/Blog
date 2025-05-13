@@ -20,7 +20,7 @@ const WeekNavButton = ({ to, direction, label }) => {
   return (
     <button
       onClick={handleNavigation}
-      className={`flex items-center gap-2 px-5 py-3 bg-color-3 text-bg-primary font-medium hover:bg-color-accent-2 transition-all duration-normal border-l border-t border-bg-primary w-full ${
+      className={`flex items-center gap-2 px-5 py-3 bg-color-3 text-bg-primary font-medium hover:bg-color-accent-2 transition-all duration-normal border-l border-t border-bg-primary w-full cursor-pointer ${
         isNext ? 'flex-row justify-center' : 'flex-row-reverse justify-center'
       }`}
     >

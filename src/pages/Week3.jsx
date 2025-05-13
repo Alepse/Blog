@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Nav from '../components/nav';
 import WeekNavButton from '../components/WeekNavButton';
-import WeekProgress from '../components/WeekProgress';
 import Footer from '../components/Footer';
 import { Calendar, Clock, User, Tag, ArrowUp, BookOpen, Code, Coffee } from 'lucide-react';
 
@@ -121,8 +120,7 @@ const Week3 = () => {
                   </ul>
                 </div>
 
-                {/* Progress Tracker */}
-                <WeekProgress currentWeek={3} />
+
 
                 {/* Navigation Card */}
                 <div className="bg-bg-secondary p-6 border-l border-t border-color-3 shadow-card">
