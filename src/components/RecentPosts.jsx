@@ -158,7 +158,7 @@ const PostCard = ({ post }) => {
         <p className="text-sm text-white/80 mb-6 line-clamp-2">{post.excerpt}</p>
 
         {/* Footer with date and view button */}
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center">l
           {/* Date */}
           <div className="flex items-center gap-2">
             <Clock size={14} className="text-white/70" />
