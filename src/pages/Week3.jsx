@@ -4,6 +4,7 @@ import Nav from '../components/nav';
 import WeekNavButton from '../components/WeekNavButton';
 import Footer from '../components/Footer';
 import { Calendar, Clock, User, Tag, ArrowUp, BookOpen, Code, Coffee } from 'lucide-react';
+import Week3Image from '../assets/Week3/Week3.1.jpg';
 
 const Week3 = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -55,7 +56,7 @@ const Week3 = () => {
           {/* Hero Section */}
           <div className={`relative h-[550px] overflow-hidden border-l border-t border-color-3 shadow-card transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <img
-              src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2000&q=80"
+              src={Week3Image}
               alt="Week 3 - Learning New Skills"
               className="w-full h-full object-cover"
             />
