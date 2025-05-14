@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Clock, User, Tag, ChevronRight } from 'lucide-react';
+import { motion, useAnimation } from 'framer-motion';
 import Thumbnail1 from '../assets/Week1/ThumbnailWeek1.jpg';
 import Thumbnail2 from '../assets/Week2/ThumbnailWeek2.jpg';
 import Week3Image from '../assets/Week3/Week3.1.jpg';
@@ -129,47 +130,48 @@ const posts = [
 
 const PostCard = ({ post }) => {
   return (
-    <div
-      className="group h-full relative bg-bg-secondary border border-color-3/30 overflow-hidden rounded-sm shadow-lg transition-all duration-300 flex flex-col transform hover:-translate-y-2 hover:shadow-xl hover:border-color-3"
-    >
-      {/* Image container with fixed aspect ratio */}
-      <div className="relative aspect-[4/3] w-full overflow-hidden">
+    <div className="group h-full relative overflow-hidden bg-black/80 border border-white/10 w-full">
+      {/* Full image background */}
+      <div className="w-full h-full">
         <img
           src={post.image}
           alt={post.title}
-          className="w-full h-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
-
-        {/* Category tag */}
-        <div className="absolute bottom-3 left-3 bg-black/70 backdrop-blur-sm px-3 py-1 z-10 border-l-2 border-color-3">
-          <span className="text-color-3 text-xs font-medium">
-            {post.category}
-          </span>
-        </div>
-
-        {/* Week badge */}
-        <div className="absolute top-3 right-3 bg-transparent px-2 py-1 z-10">
-          <span className="text-white text-sm font-medium">
-            {post.week}
-          </span>
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/20" />
       </div>
 
-      {/* Content section */}
-      <div className="p-4 flex flex-col h-[150px]">
-        <h3 className="text-base font-bold text-white font-secondary mb-2 line-clamp-2">{post.title}</h3>
-        <p className="text-xs text-white/70 line-clamp-2 mb-4">{post.excerpt}</p>
+      {/* Category tag */}
+      <div className="absolute top-4 left-4 z-10">
+        <span className="flex items-center gap-1.5 text-white/90">
+          <Tag size={16} className="text-white/90" />
+          <span className="text-sm">{post.category}</span>
+        </span>
+      </div>
 
-        {/* Card footer */}
-        <div className="flex items-center justify-between pt-2 border-t border-white/10 mt-auto">
-          <div className="flex items-center gap-1.5">
-            <Clock size={12} className="text-color-3" />
+      {/* Content overlay */}
+      <div className="absolute inset-0 flex flex-col justify-end p-6">
+        {/* Title */}
+        <h3 className="text-2xl font-bold text-white mb-3">{post.title}</h3>
+
+        {/* Description */}
+        <p className="text-sm text-white/80 mb-6 line-clamp-2">{post.excerpt}</p>
+
+        {/* Footer with date and view button */}
+        <div className="flex justify-between items-center">
+          {/* Date */}
+          <div className="flex items-center gap-2">
+            <Clock size={14} className="text-white/70" />
             <span className="text-xs text-white/70">{post.date}</span>
           </div>
-          <div className="flex items-center gap-1 text-color-3">
-            <span className="text-xs font-bold">VIEW DETAILS</span>
-            <ArrowRight size={12} className="transition-transform duration-300 group-hover:translate-x-1" />
+
+          {/* View button */}
+          <div className="inline-flex items-center gap-1">
+            <span className="text-xs font-medium text-white">VIEW</span>
+            <ArrowRight
+              size={14}
+              className="text-white"
+            />
           </div>
         </div>
       </div>
@@ -180,6 +182,95 @@ const PostCard = ({ post }) => {
 const RecentPosts = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isVisible, setIsVisible] = useState(false);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [direction, setDirection] = useState(0); // -1 for left, 1 for right
+  const postsPerPage = windowWidth >= 1280 ? 3 : windowWidth >= 1024 ? 2 : windowWidth >= 640 ? 2 : 1;
+  const totalPages = Math.ceil(posts.length / postsPerPage);
+
+  // Refs for dragging functionality
+  const carouselRef = useRef(null);
+  const controls = useAnimation();
+
+  // Animation variants
+  const variants = {
+    enter: (direction) => ({
+      x: direction > 0 ? 1000 : -1000,
+      opacity: 0,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        x: { type: "spring", stiffness: 300, damping: 30 },
+        opacity: { duration: 0.4 },
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+    exit: (direction) => ({
+      x: direction > 0 ? -1000 : 1000,
+      opacity: 0,
+      transition: {
+        x: { type: "spring", stiffness: 300, damping: 30 },
+        opacity: { duration: 0.4 },
+      },
+    }),
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  };
+
+  // Get current posts
+  const getCurrentPosts = () => {
+    const startIndex = currentPage * postsPerPage;
+    return posts.slice(startIndex, startIndex + postsPerPage);
+  };
+
+  // Handle page navigation
+  const nextPage = () => {
+    setDirection(1);
+    controls.start("exit").then(() => {
+      setCurrentPage((prev) => (prev === totalPages - 1 ? 0 : prev + 1));
+      controls.start("center");
+    });
+  };
+
+  const prevPage = () => {
+    setDirection(-1);
+    controls.start("exit").then(() => {
+      setCurrentPage((prev) => (prev === 0 ? totalPages - 1 : prev - 1));
+      controls.start("center");
+    });
+  };
+
+  // Handle drag end
+  const handleDragEnd = (_, info) => {
+    const dragDistance = info.offset.x;
+    const dragThreshold = 100; // Minimum drag distance to trigger page change
+
+    if (dragDistance > dragThreshold) {
+      setDirection(-1);
+      controls.start("exit").then(() => {
+        setCurrentPage((prev) => (prev === 0 ? totalPages - 1 : prev - 1));
+        controls.start("center");
+      });
+    } else if (dragDistance < -dragThreshold) {
+      setDirection(1);
+      controls.start("exit").then(() => {
+        setCurrentPage((prev) => (prev === totalPages - 1 ? 0 : prev + 1));
+        controls.start("center");
+      });
+    } else {
+      // Reset position if drag wasn't far enough
+      controls.start("center");
+    }
+  };
 
   // Handle window resize and animation
   useEffect(() => {
@@ -190,6 +281,7 @@ const RecentPosts = () => {
     // Trigger animations after component mounts
     const timer = setTimeout(() => {
       setIsVisible(true);
+      controls.start("center");
     }, 300);
 
     window.addEventListener('resize', handleResize);
@@ -197,41 +289,101 @@ const RecentPosts = () => {
       window.removeEventListener('resize', handleResize);
       clearTimeout(timer);
     };
-  }, []);
+  }, [controls]);
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-12 md:px-8 md:py-16 relative overflow-hidden">
+    <section className="max-w-7xl mx-auto px-6 py-16 md:px-10 md:py-24 relative overflow-hidden">
+      {/* We're using Tailwind CSS, so we'll add the styles directly to the component */}
+
       {/* Background decorative elements */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-color-3/10 rounded-full filter blur-3xl animate-pulse-slow"></div>
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-color-3/10 rounded-full filter blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
 
       <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-8 md:mb-12 gap-6">
-          <div className="w-full md:w-auto border-l border-color-3 pl-4">
-            <p className="text-color-2 max-w-2xl text-sm md:text-base">
-              Follow my weekly journey through this internship experience
-            </p>
+        <div className="flex mt-12 flex-col md:flex-row md:items-start md:justify-between mb-12 md:mb-16 gap-6">
+          <div>
+            <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">Recent Updates</h2>
+            <div className="w-full md:w-auto border-l-2 border-color-3 pl-5">
+              <p className="text-color-2 max-w-2xl text-sm md:text-base">
+                Follow my weekly journey through this internship experience
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
       <div className="relative">
-        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          {posts.map((post, index) => (
-            <Link key={index} to={post.link} className="animate-fadeIn h-full block" style={{ animationDelay: `${index * 0.05}s` }}>
-              <PostCard post={post} />
-            </Link>
-          ))}
+        <motion.div
+          ref={carouselRef}
+          className={`relative max-w-6xl mx-auto ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={0.1}
+          onDragEnd={handleDragEnd}
+          custom={direction}
+          variants={variants}
+          initial="enter"
+          animate={controls}
+          exit="exit"
+        >
+          <div className={`grid grid-cols-1 sm:grid-cols-2 ${
+            getCurrentPosts().length === 2
+              ? 'lg:grid-cols-2 xl:grid-cols-2 lg:max-w-5xl xl:max-w-5xl mx-auto'
+              : 'lg:grid-cols-3 xl:grid-cols-3'
+          } gap-6`}>
+            {getCurrentPosts().map((post, index) => (
+              <motion.div
+                key={index}
+                className="h-[350px] w-full"
+                variants={itemVariants}
+                initial="hidden"
+                animate="visible"
+                custom={index}
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Link to={post.link} className="block h-full">
+                  <PostCard post={post} />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Pagination controls */}
+        <div className="flex justify-center items-center mt-12">
+          <div className="flex items-center">
+            <button
+              onClick={prevPage}
+              className="w-14 h-14 flex items-center justify-center border border-white/20 hover:bg-white/10 transition-all duration-300 cursor-pointer"
+              aria-label="Previous page"
+            >
+              <ChevronRight size={20} className="rotate-180 text-white" />
+            </button>
+
+            <div className="px-6 py-3 border-t border-b border-white/20 bg-transparent">
+              <span className="text-sm font-medium text-white">{currentPage + 1} / {totalPages}</span>
+            </div>
+
+            <button
+              onClick={nextPage}
+              className="w-14 h-14 flex items-center justify-center border border-white/20 hover:bg-white/10 transition-all duration-300 cursor-pointer"
+              aria-label="Next page"
+            >
+              <ChevronRight size={20} className="text-white" />
+            </button>
+          </div>
         </div>
+
       </div>
 
-      <div className={`mt-8 md:mt-12 text-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <div className={`mt-16 md:mt-20 text-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <Link
           to="/week1"
-          className="inline-flex z-10 items-center px-4 py-2 md:px-6 md:py-3 bg-transparent text-color-3 border border-color-3 transition-all duration-normal group hover:bg-color-3 hover:text-bg-primary cursor-pointer"
+          className="inline-flex mb-12 z-10 items-center px-6 py-3 md:px-8 md:py-4 bg-transparent text-color-3 border-2 border-color-3 transition-all duration-normal group hover:bg-color-3 hover:text-bg-primary cursor-pointer"
         >
-          <span className="text-sm md:text-base font-bold">VIEW ALL WEEKLY LOGS</span>
-          <ChevronRight size={windowWidth < 640 ? 16 : 20} className="ml-2 transition-transform duration-normal group-hover:translate-x-1" />
+          <span className="text-sm md:text-base font-bold tracking-wider">VIEW ALL WEEKLY LOGS</span>
+          <ChevronRight size={windowWidth < 640 ? 18 : 22} className="ml-3 transition-transform duration-normal group-hover:translate-x-1" />
         </Link>
       </div>
     </section>
