@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Nav from '../components/nav';
 import WeekNavButton from '../components/WeekNavButton';
 import Footer from '../components/Footer';
-import { Calendar, Clock, User, Tag, ArrowUp, BookOpen, Code, Coffee } from 'lucide-react';
+import { Calendar, Clock, User, Tag, ArrowUp, BookOpen, Code } from 'lucide-react';
 import Week10Image1 from '../assets/Week10/week10.1.jpg';
-import Week10Image2 from '../assets/Week10/week10.2.jpg';
+import Week10Image2 from '../assets/Week10/week10.2.JPG';
 import Week10Image3 from '../assets/Week10/week10.3.jpg';
-import Week10Image4 from '../assets/Week10/week10.4.jpg';
-import Week10Image5 from '../assets/Week10/week10.5.jpg';
+import Week10Image4 from '../assets/Week10/week10.4.JPG';
+import Week10Image5 from '../assets/Week10/week10.5.JPG';
 
 const Week11 = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
