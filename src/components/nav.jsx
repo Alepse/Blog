@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Home, BookOpen, Menu, X, ChevronDown, ChevronUp } from 'lucide-react';
 
@@ -8,6 +8,11 @@ const Nav = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isWeeksDropdownOpen, setIsWeeksDropdownOpen] = useState(false);
+
+  // Refs for dropdown containers
+  const desktopDropdownRef = useRef(null);
+  const mobileDropdownRef = useRef(null);
+  const dropdownButtonRef = useRef(null);
 
   // Custom navigation handler to ensure scroll to top
   const handleNavigation = (path) => {
@@ -21,6 +26,31 @@ const Nav = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Handle clicks outside the dropdown to close it
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Check if dropdown is open
+      if (!isWeeksDropdownOpen) return;
+
+      // Check if click is outside both the dropdown and the button that toggles it
+      const isClickOutsideDesktopDropdown = desktopDropdownRef.current && !desktopDropdownRef.current.contains(event.target);
+      const isClickOutsideMobileDropdown = mobileDropdownRef.current && !mobileDropdownRef.current.contains(event.target);
+      const isClickOutsideButton = dropdownButtonRef.current && !dropdownButtonRef.current.contains(event.target);
+
+      if ((isClickOutsideDesktopDropdown && isClickOutsideMobileDropdown && isClickOutsideButton)) {
+        setIsWeeksDropdownOpen(false);
+      }
+    };
+
+    // Add event listener
+    document.addEventListener('mousedown', handleClickOutside);
+
+    // Clean up
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isWeeksDropdownOpen]);
 
   const isActive = (path) => {
     return location.pathname === path;
@@ -92,6 +122,7 @@ const Nav = () => {
             {/* Weeks Dropdown */}
             <div className="relative group">
               <button
+                ref={dropdownButtonRef}
                 onClick={() => setIsWeeksDropdownOpen(!isWeeksDropdownOpen)}
                 className={`flex items-center justify-between px-5 py-2 transition-all duration-normal min-w-[150px] cursor-pointer ${
                   isWeekPage
@@ -110,7 +141,10 @@ const Nav = () => {
               </button>
 
               {isWeeksDropdownOpen && (
-                <div className="absolute top-full right-0 mt-2 w-[400px] bg-black/95 z-50 rounded-lg border-l border-t border-color-3 animate-slideDown shadow-elevated backdrop-blur-3xl" style={{ boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.8)' }}>
+                <div
+                  ref={desktopDropdownRef}
+                  className="absolute top-full right-0 mt-2 w-[400px] bg-black/95 z-50 rounded-lg border-l border-t border-color-3 animate-slideDown shadow-elevated backdrop-blur-3xl"
+                  style={{ boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.8)' }}>
                   <div className="max-h-[75vh] overflow-y-auto p-6">
                     <div className="grid grid-cols-1 gap-6">
                       {weekPages.map((week) => (
@@ -200,7 +234,10 @@ const Nav = () => {
                 </button>
 
                 {isWeeksDropdownOpen && (
-                  <div className="bg-black backdrop-blur-3xl animate-slideDown p-4" style={{ boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.8)' }}>
+                  <div
+                    ref={mobileDropdownRef}
+                    className="bg-black backdrop-blur-3xl animate-slideDown p-4"
+                    style={{ boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.8)' }}>
                     {/* Scroll indicator */}
                     <div className="flex justify-center mb-2">
                       <div className="w-10 h-1 bg-color-3/50 rounded-full"></div>
