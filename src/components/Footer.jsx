@@ -3,10 +3,10 @@ import {
   Mail,
   Heart,
   ArrowUp,
-  Share2,
-  MessageSquare,
-  Globe,
-  User
+  Github,
+  User,
+   Facebook,
+   Globe
 } from 'lucide-react';
 
 const Footer = () => {
@@ -40,11 +40,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Globe, label: 'Website', href: 'https://github.com' },
-    { icon: User, label: 'Profile', href: 'https://linkedin.com' },
-    { icon: Share2, label: 'Share', href: 'https://twitter.com' },
-    { icon: MessageSquare, label: 'Message', href: 'https://instagram.com' },
-    { icon: Mail, label: 'Email', href: 'mailto:contact@example.com' },
+    { icon: Github , label: 'Github', href: 'https://github.com/Alepse' },
+    { icon: User, label: 'Profile', href: 'https://www.linkedin.com/in/kenneth-espela-123653180/' },
+    { icon:  Facebook, label: 'Facebook', href: 'https://web.facebook.com/kenneth.espela.9' },
+    { icon:  Globe, label: 'Portfolio', href: 'https://my-portfolio-weld-five-42.vercel.app/' },
   ];
 
   return (
@@ -67,10 +66,10 @@ const Footer = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-color-2 hover:text-color-3 transition-colors duration-normal bg-bg-secondary p-2 cursor-pointer"
+                    className="text-color-2 hover:text-color-3 transition-all duration-normal bg-bg-secondary p-2 cursor-pointer hover:bg-bg-tertiary hover:scale-110 hover:shadow-sm hover:border-l hover:border-t hover:border-color-3/50 flex items-center justify-center"
                     aria-label={social.label}
                   >
-                    <Icon size={20} />
+                    <Icon size={20} className="transition-transform duration-normal hover:rotate-12" />
                   </a>
                 );
               })}
@@ -82,15 +81,21 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4 text-color-1 bg-color-3 inline-block px-4 py-1">QUICK LINKS</h3>
             <ul className="space-y-0 border-l-2 border-color-3">
               <li>
-                <button onClick={() => handleNavigation('/')} className="text-color-2 hover:text-color-3 transition-colors duration-normal flex items-center gap-2 bg-bg-tertiary p-2 border-b border-color-3/10 w-full text-left cursor-pointer">
-                  <span className="w-3 h-3 bg-color-3"></span>
-                  HOME
+                <button
+                  onClick={() => handleNavigation('/')}
+                  className="text-color-2 hover:text-color-3 transition-all duration-normal flex items-center gap-2 bg-bg-tertiary p-2 border-b border-color-3/10 w-full text-left cursor-pointer group hover:bg-bg-secondary hover:pl-3"
+                >
+                  <span className="w-3 h-3 bg-color-3 transition-all duration-normal group-hover:scale-125 group-hover:rotate-45"></span>
+                  <span className="transition-transform duration-normal group-hover:translate-x-1">HOME</span>
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavigation('/week1')} className="text-color-2 hover:text-color-3 transition-colors duration-normal flex items-center gap-2 bg-bg-tertiary p-2 border-b border-color-3/10 w-full text-left cursor-pointer">
-                  <span className="w-3 h-3 bg-color-3"></span>
-                  WEEKLY LOGS
+                <button
+                  onClick={() => handleNavigation('/week1')}
+                  className="text-color-2 hover:text-color-3 transition-all duration-normal flex items-center gap-2 bg-bg-tertiary p-2 border-b border-color-3/10 w-full text-left cursor-pointer group hover:bg-bg-secondary hover:pl-3"
+                >
+                  <span className="w-3 h-3 bg-color-3 transition-all duration-normal group-hover:scale-125 group-hover:rotate-45"></span>
+                  <span className="transition-transform duration-normal group-hover:translate-x-1">WEEKLY LOGS</span>
                 </button>
               </li>
             </ul>
@@ -104,12 +109,12 @@ const Footer = () => {
                 <button
                   key={index}
                   onClick={() => handleNavigation(week.path)}
-                  className="text-color-2 hover:text-color-3 transition-colors duration-normal flex items-center justify-between p-2 border-b border-color-3/10 hover:bg-bg-secondary w-full text-left cursor-pointer"
+                  className="text-color-2 hover:text-color-3 transition-all duration-normal flex items-center justify-between p-2 border-b border-color-3/10 hover:bg-bg-secondary w-full text-left cursor-pointer group hover:pl-3 hover:border-l hover:border-color-3"
                 >
                   <div className="flex items-center">
-                    <span className="pl-1">{week.label}</span>
+                    <span className="pl-1 transition-transform duration-normal group-hover:translate-x-1">{week.label}</span>
                   </div>
-                  <span className="text-xs text-color-2/70 bg-bg-secondary px-2 py-1 rounded-sm">{week.dates}</span>
+                  <span className="text-xs text-color-2/70 bg-bg-secondary px-2 py-1 rounded-sm transition-all duration-normal group-hover:bg-color-3/20 group-hover:text-color-1">{week.dates}</span>
                 </button>
               ))}
             </div>
@@ -123,17 +128,17 @@ const Footer = () => {
             </p>
 
             <div className="border-l-2 border-t-2 border-color-3 p-4 bg-bg-tertiary/30">
-              <div className="flex items-center gap-3 mb-3 bg-bg-secondary p-3 border-l-2 border-color-3">
-                <Mail className="text-color-3" size={20} />
-                <span className="text-color-1">kenespela@gmail.com</span>
+              <div className="flex items-center gap-3 mb-3 bg-bg-secondary p-3 border-l-2 border-color-3 transition-all duration-normal hover:bg-bg-tertiary hover:border-color-3 group cursor-pointer">
+                <Mail className="text-color-3 transition-transform duration-normal group-hover:rotate-12 group-hover:scale-110" size={20} />
+                <span className="text-color-1 transition-all duration-normal group-hover:text-color-3 group-hover:translate-x-1">kenespela@gmail.com</span>
               </div>
 
               <a
                 href="mailto:kenespela@gmail.com?subject=Internship%20Blog%20Inquiry"
-                className="flex justify-center items-center gap-2 w-full bg-color-3 hover:bg-color-accent-2 text-bg-primary py-3 px-4 transition-colors duration-normal border-l-2 border-t-2 border-bg-primary cursor-pointer"
+                className="flex justify-center items-center gap-2 w-full bg-color-3 hover:bg-color-accent-2 text-bg-primary py-3 px-4 transition-all duration-normal border-l-2 border-t-2 border-bg-primary cursor-pointer group hover:shadow-md hover:scale-[1.02]"
               >
-                <Mail size={18} />
-                <span>SEND EMAIL</span>
+                <Mail size={18} className="transition-transform duration-normal group-hover:rotate-12 group-hover:scale-110" />
+                <span className="transition-transform duration-normal group-hover:translate-x-1">SEND EMAIL</span>
               </a>
             </div>
           </div>
@@ -151,11 +156,11 @@ const Footer = () => {
           <div className="flex items-center gap-4">
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-2 text-color-2 hover:text-color-3 transition-colors duration-normal group bg-bg-tertiary p-2 border-l-2 border-color-3 cursor-pointer"
+              className="flex items-center gap-2 text-color-2 hover:text-color-3 transition-all duration-normal group bg-bg-tertiary p-2 border-l-2 border-color-3 cursor-pointer hover:bg-bg-secondary hover:border-color-3 hover:shadow-sm"
               aria-label="Scroll to top"
             >
-              <span>BACK TO TOP</span>
-              <ArrowUp size={16} className="group-hover:-translate-y-1 transition-transform duration-normal" />
+              <span className="transition-transform duration-normal group-hover:translate-x-1">BACK TO TOP</span>
+              <ArrowUp size={16} className="group-hover:-translate-y-1 transition-transform duration-normal group-hover:scale-110" />
             </button>
 
             <div className="flex items-center text-color-2 bg-bg-tertiary p-2">
