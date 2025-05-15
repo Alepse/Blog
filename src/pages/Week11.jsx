@@ -6,9 +6,6 @@ import Footer from '../components/Footer';
 import { Calendar, Clock, User, Tag, ArrowUp, BookOpen, Code } from 'lucide-react';
 import Week11Image1 from '../assets/Week11/week11.1.jpg';
 import Week11Image2 from '../assets/Week11/week11.2.JPG';
-import Week11Image3 from '../assets/Week11/week11.3.jpg';
-import Week11Image4 from '../assets/Week11/week11.4.jpg';
-import Week11Image5 from '../assets/Week11/week11.5.jpg';
 
 
 const Week11 = () => {
@@ -177,12 +174,7 @@ const Week11 = () => {
                     </div>
                     <span>Refined form elements with better validation and user feedback</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
-                      <span className="text-xs">04</span>
-                    </div>
-                    <span>Added subtle animations and transitions for a more engaging experience</span>
-                  </li>
+              
                 </ul>
               </div>
 
@@ -193,41 +185,22 @@ const Week11 = () => {
                   <img src={Week11Image2} alt="UI/UX Adjustments" className="w-full h-64 object-cover" />
                   <div className="p-4">
                     <h4 className="text-lg font-bold text-color-1 mb-2">Visual Consistency</h4>
-                    <p className="text-sm text-color-2">Ensuring consistent design elements across all interfaces.</p>
+                   
                   </div>
                 </div>
 
-                <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week11Image3} alt="Interface Improvements" className="w-full h-64 object-cover" />
-                  <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Navigation Improvements</h4>
-                    <p className="text-sm text-color-2">Enhancing navigation elements for better user flow.</p>
-                  </div>
-                </div>
-              </div>
+              
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
-                <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week11Image4} alt="UI Design" className="w-full h-48 object-cover" />
-                  <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Form Refinements</h4>
-                    <p className="text-sm text-color-2">Improving form elements with better validation and feedback.</p>
-                  </div>
-                </div>
+            
+
+
+          
+              
 
                 <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week11Image5} alt="UX Improvements" className="w-full h-48 object-cover" />
+                  <img src={Week11Image1} alt="Final Thoughts" className="w-full h-64 object-cover" />
                   <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Animation Effects</h4>
-                    <p className="text-sm text-color-2">Adding subtle animations for a more engaging experience.</p>
-                  </div>
-                </div>
-
-                <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week11Image1} alt="Final Thoughts" className="w-full h-48 object-cover" />
-                  <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Responsive Design</h4>
-                    <p className="text-sm text-color-2">Ensuring optimal viewing experience across all devices.</p>
+                    <h4 className="text-lg font-bold text-color-1 mb-2">Content Brainstorming in IT Admin Side</h4>
                   </div>
                 </div>
               </div>
