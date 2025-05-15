@@ -5,7 +5,7 @@ import WeekNavButton from '../components/WeekNavButton';
 import Footer from '../components/Footer';
 import { Calendar, Clock, User, Tag, ArrowUp, BookOpen, Code } from 'lucide-react';
 import Week11Image1 from '../assets/Week11/week11.1.jpg';
-import Week11Image2 from '../assets/Week11/week11.2.JPG';
+import Week11Image2 from '../assets/Week11/week11.2.jpg';
 
 
 const Week11 = () => {
@@ -174,7 +174,7 @@ const Week11 = () => {
                     </div>
                     <span>Refined form elements with better validation and user feedback</span>
                   </li>
-              
+
                 </ul>
               </div>
 
@@ -185,17 +185,17 @@ const Week11 = () => {
                   <img src={Week11Image2} alt="UI/UX Adjustments" className="w-full h-64 object-cover" />
                   <div className="p-4">
                     <h4 className="text-lg font-bold text-color-1 mb-2">Visual Consistency</h4>
-                   
+
                   </div>
                 </div>
 
-              
-
-            
 
 
-          
-              
+
+
+
+
+
 
                 <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
                   <img src={Week11Image1} alt="Final Thoughts" className="w-full h-64 object-cover" />
