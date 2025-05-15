@@ -1,12 +1,18 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Home, BookOpen, Menu, X, ChevronDown, ChevronUp } from 'lucide-react';
 
 const Nav = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isWeeksDropdownOpen, setIsWeeksDropdownOpen] = useState(false);
+
+  // Custom navigation handler to ensure scroll to top
+  const handleNavigation = (path) => {
+    navigate(path, { state: { scrollToTop: true } });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,9 +57,9 @@ const Nav = () => {
       <div className='max-w-7xl mx-auto px-4'>
         <div className='flex items-center justify-between h-16'>
           {/* Logo/Brand */}
-          <Link
-            to="/"
-            className="group flex items-center"
+          <button
+            onClick={() => handleNavigation('/')}
+            className="group flex items-center text-left cursor-pointer"
           >
             <div className="flex flex-col border-l border-color-3 pl-4">
               <span className="text-xl md:text-2xl font-bold font-secondary tracking-wide transition-colors duration-normal text-color-1 group-hover:text-color-3">
@@ -63,16 +69,16 @@ const Nav = () => {
                 by Kenneth Espela
               </span>
             </div>
-          </Link>
+          </button>
 
           {/* Desktop Navigation */}
           <div className='hidden md:flex items-center space-x-6'>
             {/* Home Link */}
             {navLinks.map(({ path, icon: Icon, label }) => (
-              <Link
+              <button
                 key={path}
-                to={path}
-                className={`flex items-center space-x-2 px-5 py-2 transition-all duration-normal ${
+                onClick={() => handleNavigation(path)}
+                className={`flex items-center space-x-2 px-5 py-2 transition-all duration-normal cursor-pointer ${
                   isActive(path)
                     ? 'bg-color-3 text-bg-primary border-l border-t border-white shadow-elevated'
                     : 'text-color-1 hover:bg-bg-tertiary/80 border-l border-transparent hover:border-color-3 hover:text-color-3'
@@ -80,14 +86,14 @@ const Nav = () => {
               >
                 <Icon size={18} />
                 <span>{label}</span>
-              </Link>
+              </button>
             ))}
 
             {/* Weeks Dropdown */}
             <div className="relative group">
               <button
                 onClick={() => setIsWeeksDropdownOpen(!isWeeksDropdownOpen)}
-                className={`flex items-center justify-between px-5 py-2 transition-all duration-normal min-w-[150px] ${
+                className={`flex items-center justify-between px-5 py-2 transition-all duration-normal min-w-[150px] cursor-pointer ${
                   isWeekPage
                     ? 'bg-color-3 text-bg-primary border-l border-t border-white shadow-elevated'
                     : 'text-color-1 hover:bg-bg-tertiary/80 border-l border-transparent hover:border-color-3 hover:text-color-3'
@@ -108,11 +114,13 @@ const Nav = () => {
                   <div className="max-h-[75vh] overflow-y-auto p-6">
                     <div className="grid grid-cols-1 gap-6">
                       {weekPages.map((week) => (
-                        <Link
+                        <button
                           key={week.path}
-                          to={week.path}
-                          onClick={() => setIsWeeksDropdownOpen(false)}
-                          className={`group flex items-center justify-between px-6 py-4 rounded-lg transition-all duration-fast hover:scale-[1.02] ${
+                          onClick={() => {
+                            setIsWeeksDropdownOpen(false);
+                            handleNavigation(week.path);
+                          }}
+                          className={`group flex items-center justify-between px-6 py-4 rounded-lg transition-all duration-fast hover:scale-[1.02] cursor-pointer ${
                             isActive(week.path)
                               ? 'bg-color-3 text-bg-primary border-l border-t border-bg-primary shadow-elevated'
                               : 'text-color-1 bg-bg-tertiary/90 backdrop-blur-xl border-l border-t border-color-3/50 hover:border-color-3 hover:shadow-elevated hover:bg-bg-tertiary/95'
@@ -126,7 +134,7 @@ const Nav = () => {
                               ? 'bg-bg-primary text-color-3'
                               : 'bg-bg-secondary/95 backdrop-blur-lg text-color-1 group-hover:bg-color-3/20'
                           }`}>{week.dates}</span>
-                        </Link>
+                        </button>
                       ))}
                     </div>
                   </div>
@@ -154,11 +162,13 @@ const Nav = () => {
             <div className='py-2'>
               {/* Home Link */}
               {navLinks.map(({ path, icon: Icon, label }) => (
-                <Link
+                <button
                   key={path}
-                  to={path}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`flex items-center space-x-3 px-4 py-3 transition-all duration-normal border-b border-color-3/10 ${
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    handleNavigation(path);
+                  }}
+                  className={`flex items-center space-x-3 px-4 py-3 transition-all duration-normal border-b border-color-3/10 w-full text-left cursor-pointer ${
                     isActive(path)
                       ? 'bg-color-3 text-bg-primary border-l border-t border-white shadow-elevated'
                       : 'text-color-1 hover:bg-bg-tertiary/80 border-l border-transparent hover:border-color-3 hover:text-color-3'
@@ -166,7 +176,7 @@ const Nav = () => {
                 >
                   <Icon size={20} className={isActive(path) ? '' : 'text-color-3'} />
                   <span className="font-medium">{label}</span>
-                </Link>
+                </button>
               ))}
 
               {/* Mobile Weeks Accordion */}
@@ -205,14 +215,14 @@ const Nav = () => {
                         </div>
 
                         {weekPages.map((week) => (
-                          <Link
+                          <button
                             key={week.path}
-                            to={week.path}
                             onClick={() => {
                               setIsMobileMenuOpen(false);
                               setIsWeeksDropdownOpen(false);
+                              handleNavigation(week.path);
                             }}
-                            className={`group flex items-center justify-between px-4 py-3 rounded-lg transition-all duration-fast hover:scale-[1.02] ${
+                            className={`group flex items-center justify-between px-4 py-3 rounded-lg transition-all duration-fast hover:scale-[1.02] w-full text-left cursor-pointer ${
                               isActive(week.path)
                                 ? 'bg-color-3 text-bg-primary border-l border-t border-bg-primary shadow-elevated'
                                 : 'text-color-1 bg-bg-tertiary/90 backdrop-blur-xl border-l border-t border-color-3/50 hover:border-color-3 hover:shadow-elevated hover:bg-bg-tertiary/95'
@@ -222,7 +232,7 @@ const Nav = () => {
                               <span className="font-medium text-sm">{week.label}</span>
                             </div>
                             <span className="text-xs px-3 py-1 bg-black/30 rounded">{week.dates}</span>
-                          </Link>
+                          </button>
                         ))}
                       </div>
                     </div>

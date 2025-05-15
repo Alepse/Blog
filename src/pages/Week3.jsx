@@ -115,7 +115,7 @@ const Week3 = () => {
                       <Coffee className="mr-2 text-color-3 mt-1" size={16} />
                       <div>
                         <span className="block text-sm font-medium text-color-1">Skills</span>
-                        <span className="text-sm text-color-2">React, JavaScript, Git</span>
+                        <span className="text-sm text-color-2">React, JavaScript, Git, Figma (UX/UI Designing)</span>
                       </div>
                     </li>
                   </ul>
@@ -155,12 +155,12 @@ const Week3 = () => {
 
               <p className="text-lg text-color-1 mb-8 leading-relaxed border-l border-color-3 pl-6 py-3 bg-bg-tertiary/30">
                 During my third week of internship, I focused on expanding my knowledge of development tools and methodologies.
-                This week was particularly exciting as I got to dive deeper into more advanced concepts and techniques.
+                This week was particularly exciting as I got to dive deeper into  concepts and techniques.
               </p>
 
               <p className="text-lg text-color-2 mb-8 leading-relaxed">
                 The team introduced me to several new tools that significantly improved my workflow and productivity.
-                I learned how to use Git more effectively for version control, explored advanced features in VS Code,
+                I learned how to use Git more effectively for version control, explored advanced features in using component base libraries in React,
                 and got familiar with debugging techniques that helped me solve problems more efficiently.
               </p>
 
@@ -196,28 +196,22 @@ const Week3 = () => {
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">05</span>
                     </div>
-                    <span>Performance optimization techniques for web applications</span>
+                    <span>React components and how to use them effectively</span>
                   </li>
                 </ul>
               </div>
 
-              <blockquote className="border-l-2 border-color-3 pl-4 py-2 my-6 bg-bg-tertiary/30 italic">
-                "The best way to learn is by doing. Don't be afraid to make mistakes – they're valuable learning opportunities."
-                <cite className="block text-color-3 mt-2 not-italic">— Senior Developer</cite>
-              </blockquote>
+
 
               <p className="text-base text-color-2 mb-6 border-l-2 border-color-3/30 pl-4 py-2">
-                I'm looking forward to applying these new skills in upcoming projects and continuing to expand my knowledge
-                in the weeks ahead. The team has been incredibly supportive, providing guidance and feedback that has helped
-                me grow as a developer.
+                I'm looking forward to applying these improved skills in upcoming projects and continuing to expand my knowledge
+                in the weeks ahead.
               </p>
 
               <h3 className="text-xl font-bold text-color-1 mt-8 mb-4 font-secondary bg-bg-tertiary px-4 py-2 border-l-2 border-color-3 inline-block">Looking Ahead</h3>
 
               <p className="text-base text-color-2 mb-6 border-l-2 border-color-3/30 pl-4 py-2">
-                Next week, I'll be joining a collaborative project where I'll work closely with other team members.
-                I'm excited about this opportunity to apply what I've learned so far and to learn from my peers through
-                direct collaboration.
+                Next week, I plan to continue refining my development skills and exploring new technologies.
               </p>
             </article>
           </div>
@@ -230,7 +224,7 @@ const Week3 = () => {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 p-4 bg-color-3 text-bg-primary rounded-full shadow-elevated hover:bg-color-accent-2 transition-all duration-normal hover:scale-110 z-40 border-l border-t border-bg-primary"
+          className="fixed bottom-8 right-8 p-4 bg-color-3 text-bg-primary rounded-full shadow-elevated hover:bg-color-accent-2 transition-all duration-normal hover:scale-110 z-40 border-l border-t border-bg-primary cursor-pointer"
           aria-label="Scroll to top"
         >
           <ArrowUp size={24} />

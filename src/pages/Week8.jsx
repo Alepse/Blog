@@ -79,10 +79,10 @@ const Week8 = () => {
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-color-1 mb-3 font-secondary animate-fadeIn" style={{ animationDelay: '0.3s' }}>
-                Advanced Techniques
+                HR Frontend & IT Support
               </h1>
               <p className="text-color-2 max-w-2xl animate-fadeIn" style={{ animationDelay: '0.4s' }}>
-                Learning and implementing advanced development techniques during my eighth week.
+                Developing the HR side frontend and gaining hands-on experience with PC maintenance and troubleshooting.
               </p>
             </div>
           </div>
@@ -110,7 +110,7 @@ const Week8 = () => {
                       <Code className="mr-2 text-color-3 mt-1" size={16} />
                       <div>
                         <span className="block text-sm font-medium text-color-1">Focus</span>
-                        <span className="text-sm text-color-2">Advanced Techniques</span>
+                        <span className="text-sm text-color-2">HR Frontend & IT Support</span>
                       </div>
                     </li>
                   </ul>
@@ -140,19 +140,19 @@ const Week8 = () => {
                 </div>
                 <div className="flex items-center gap-1">
                   <Tag size={16} className="text-color-3" />
-                  <span>Technical Skills</span>
+                  <span>HR Frontend & IT Support</span>
                 </div>
               </div>
 
               <p className="text-lg text-color-1 mb-8 leading-relaxed border-l border-color-3 pl-6 py-3 bg-bg-tertiary/30">
-                During Week 8, I focused on learning and implementing advanced development techniques.
+                During Week 8, I began developing the frontend for the HR side of our application while also participating in PC maintenance and troubleshooting activities.
               </p>
 
               <p className="text-base text-color-2 mb-8">
-                This week was dedicated to exploring more complex programming concepts and tools that would enhance our knowledge management portal's functionality and performance.
+                After successfully implementing the employee dashboard in the previous week, we shifted our focus to developing the HR side of the application. Additionally, I had the opportunity to gain hands-on experience with IT support tasks, including PC maintenance and troubleshooting system unit problems.
               </p>
 
-              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Advanced Techniques Learned</h2>
+              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">HR Frontend Development</h2>
 
               <div className="bg-bg-tertiary p-8 my-10 border-l border-t border-color-3 shadow-soft">
                 <ul className="space-y-5 text-color-2 text-lg">
@@ -160,70 +160,108 @@ const Week8 = () => {
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">01</span>
                     </div>
-                    <span>Advanced state management patterns for complex applications</span>
+                    <span>Designing and implementing the HR dashboard interface with Next.js</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">02</span>
                     </div>
-                    <span>Performance optimization techniques for React applications</span>
+                    <span>Creating employee management features for HR administrators</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">03</span>
                     </div>
-                    <span>Advanced API integration and data handling strategies</span>
+                    <span>Developing data visualization components for HR analytics</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
+                      <span className="text-xs">04</span>
+                    </div>
+                    <span>Implementing role-based access control for HR functionality</span>
                   </li>
                 </ul>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
                 <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week8Image1} alt="Advanced Development Techniques" className="w-full h-64 object-cover" />
+                  <img src={Week8Image1} alt="HR Dashboard Development" className="w-full h-64 object-cover" />
                   <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Technical Growth</h4>
-                    <p className="text-sm text-color-2">Expanding my technical skills with advanced development concepts.</p>
+                    <h4 className="text-lg font-bold text-color-1 mb-2">HR Dashboard</h4>
+                    <p className="text-sm text-color-2">Developing the frontend interface for HR administrators.</p>
                   </div>
                 </div>
                 <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week8Image2} alt="Performance Optimization" className="w-full h-64 object-cover" />
+                  <img src={Week8Image2} alt="PC Maintenance" className="w-full h-64 object-cover" />
                   <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Performance Optimization</h4>
-                    <p className="text-sm text-color-2">Implementing techniques to improve application performance.</p>
+                    <h4 className="text-lg font-bold text-color-1 mb-2">PC Maintenance</h4>
+                    <p className="text-sm text-color-2">Gaining hands-on experience with hardware maintenance tasks.</p>
                   </div>
                 </div>
                 <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week8Image3} alt="Advanced API Integration" className="w-full h-64 object-cover" />
+                  <img src={Week8Image3} alt="System Troubleshooting" className="w-full h-64 object-cover" />
                   <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">API Integration</h4>
-                    <p className="text-sm text-color-2">Working with complex API integrations and data handling.</p>
+                    <h4 className="text-lg font-bold text-color-1 mb-2">System Troubleshooting</h4>
+                    <p className="text-sm text-color-2">Diagnosing and resolving system unit problems.</p>
                   </div>
                 </div>
               </div>
 
-              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Implementation Challenges</h2>
+              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">PC Maintenance & Troubleshooting</h2>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                Implementing these advanced techniques presented several challenges. One of the most significant was optimizing the application's performance while maintaining a clean and maintainable codebase. We had to carefully balance technical complexity with code readability and long-term maintainability.
+                In addition to my frontend development work, I participated in several IT support activities this week. These hands-on experiences provided valuable insights into hardware maintenance and system troubleshooting.
+              </p>
+
+              <div className="bg-bg-tertiary p-8 my-10 border-l border-t border-color-3 shadow-soft">
+                <ul className="space-y-5 text-color-2 text-lg">
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
+                      <span className="text-xs">01</span>
+                    </div>
+                    <span>Cleaning and maintaining computer hardware components</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
+                      <span className="text-xs">02</span>
+                    </div>
+                    <span>Diagnosing and resolving system boot issues</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
+                      <span className="text-xs">03</span>
+                    </div>
+                    <span>Troubleshooting hardware compatibility problems</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
+                      <span className="text-xs">04</span>
+                    </div>
+                    <span>Performing software updates and system optimizations</span>
+                  </li>
+                </ul>
+              </div>
+
+         
+
+              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Development Challenges</h2>
+
+              <p className="text-base text-color-2 mb-8 leading-relaxed">
+                Developing the HR side of our application presented unique challenges. The HR interface required more complex data management and visualization capabilities compared to the employee dashboard. We needed to implement role-based access control to ensure that sensitive employee information was only accessible to authorized HR personnel.
               </p>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                Another challenge was integrating with complex APIs that required sophisticated error handling and data transformation. We implemented robust error handling strategies and created reusable utilities for data transformation to address these challenges.
+                Another challenge was designing an intuitive interface that would allow HR administrators to efficiently manage employee records, process requests, and generate reports. We focused on creating a clean, organized layout with clear navigation and contextual actions.
               </p>
-
-              <blockquote className="border-l-2 border-color-3 pl-4 py-2 my-6 bg-bg-tertiary/30 italic">
-                "Advanced techniques are not about writing complex code, but about solving complex problems with elegant solutions."
-                <cite className="block text-color-3 mt-2 not-italic">— Senior Developer</cite>
-              </blockquote>
 
               <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Key Learnings</h2>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                This week taught me the importance of continuous learning and staying updated with the latest development techniques. I also learned that advanced techniques should be applied judiciously, always considering the specific requirements and constraints of the project.
+                This week provided a diverse set of learning experiences. On the development side, I gained valuable experience in creating administrative interfaces and implementing role-based security. The HR dashboard development deepened my understanding of Next.js and TypeScript while challenging me to think from an administrator's perspective.
               </p>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                Moving forward, I'll continue to explore and implement advanced techniques while maintaining a focus on code quality and user experience. The knowledge gained this week will be invaluable as we approach the final stages of our project development.
+                The IT support activities broadened my technical skills beyond software development. Understanding hardware components, diagnosing system issues, and performing maintenance tasks gave me a more holistic view of technology infrastructure. These skills will be valuable throughout my career, regardless of my specific role.
               </p>
             </article>
           </div>

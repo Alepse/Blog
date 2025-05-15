@@ -5,10 +5,9 @@ import WeekNavButton from '../components/WeekNavButton';
 import Footer from '../components/Footer';
 import { Calendar, Clock, User, Tag, ArrowUp, BookOpen, Code, Coffee } from 'lucide-react';
 import Week10Image1 from '../assets/Week10/week10.1.jpg';
-import Week10Image2 from '../assets/Week10/week10.2.JPG';
-import Week10Image3 from '../assets/Week10/week10.3.jpg';
-import Week10Image4 from '../assets/Week10/week10.4.JPG';
-import Week10Image5 from '../assets/Week10/week10.5.JPG';
+import Week10Image3 from '../assets/Week10/week10.7.jpg';
+import Week10Image4 from '../assets/Week10/week10.6.JPG';
+
 
 const Week10 = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -81,10 +80,10 @@ const Week10 = () => {
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-color-1 mb-3 font-secondary animate-fadeIn" style={{ animationDelay: '0.3s' }}>
-                Final Preparations
+                Innovation Summit & IT Admin
               </h1>
               <p className="text-color-2 max-w-2xl animate-fadeIn" style={{ animationDelay: '0.4s' }}>
-                Preparing for the conclusion of my internship and finalizing all projects.
+                Experiencing the DOST-V Innovation Summit and developing the IT admin frontend.
               </p>
             </div>
           </div>
@@ -112,7 +111,7 @@ const Week10 = () => {
                       <Code className="mr-2 text-color-3 mt-1" size={16} />
                       <div>
                         <span className="block text-sm font-medium text-color-1">Focus</span>
-                        <span className="text-sm text-color-2">Final Preparations</span>
+                        <span className="text-sm text-color-2">Innovation Summit & IT Admin</span>
                       </div>
                     </li>
                   </ul>
@@ -140,17 +139,21 @@ const Week10 = () => {
                   <User size={16} className="text-color-3" />
                   <span>Kenneth Espela</span>
                 </div>
+                <div className="flex items-center gap-1">
+                  <Tag size={16} className="text-color-3" />
+                  <span>Innovation Summit & IT Admin</span>
+                </div>
               </div>
 
               <p className="text-lg text-color-1 mb-8 leading-relaxed border-l border-color-3 pl-6 py-3 bg-bg-tertiary/30">
-                During Week 10, I focused on finalizing all projects and preparing for the conclusion of my internship.
+                During Week 10, I experienced the DOST-V Innovation Summit on Monday and Tuesday, then developed the IT admin side of our application from Wednesday to Friday.
               </p>
 
               <p className="text-base text-color-2 mb-8">
-                This week was dedicated to tying up loose ends, completing documentation, and ensuring a smooth transition as my internship comes to a close.
+                This week was divided into two distinct parts. The first half was dedicated to the DOST-V Innovation Summit, where I handled live streaming and technical aspects of the event. It was my first time participating in such an event, and it provided an amazing learning experience. The second half of the week focused on setting up and developing the frontend for the IT admin side of our application.
               </p>
 
-              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Final Week Preparations</h2>
+              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">DOST-V Innovation Summit (Mon-Tue)</h2>
 
               <div className="bg-bg-tertiary p-8 my-10 border-l border-t border-color-3 shadow-soft">
                 <ul className="space-y-5 text-color-2 text-lg">
@@ -158,58 +161,90 @@ const Week10 = () => {
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">01</span>
                     </div>
-                    <span>Completed all project deliverables and documentation</span>
+                    <span>Managed live streaming setup and operations for the Innovation Summit</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">02</span>
                     </div>
-                    <span>Prepared final presentation for stakeholders</span>
+                    <span>Handled technical aspects of the event including audio-visual equipment</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">03</span>
                     </div>
-                    <span>Created transition plans for ongoing projects</span>
+                    <span>Collaborated with event staff to ensure smooth technical operations</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
+                      <span className="text-xs">04</span>
+                    </div>
+                    <span>Gained valuable experience in event technical management</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week10Image2} alt="Project Documentation" className="w-full h-64 object-cover" />
+              <div className="grid grid-cols-1 gap-6 my-8">
+                <div className="bg-bg-tertiary/30 border-l border- w-full border-color-3 overflow-hidden">
+                  <img src={Week10Image3} alt="Innovation Summit" className="w-full h-64 object-cover" />
                   <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Documentation</h4>
-                    <p className="text-sm text-color-2">Finalizing all project documentation for handover.</p>
+                    <h4 className="text-lg font-bold text-color-1 mb-2">Technical Operations</h4>
+                    <p className="text-sm text-color-2">Ensuring smooth technical operations during the Innovation Summit.</p>
                   </div>
                 </div>
 
-                <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week10Image3} alt="Final Presentation" className="w-full h-64 object-cover" />
-                  <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Presentation Prep</h4>
-                    <p className="text-sm text-color-2">Preparing the final presentation for stakeholders.</p>
-                  </div>
-                </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">IT Admin Development (Wed-Fri)</h2>
+
+              <div className="bg-bg-tertiary p-8 my-10 border-l border-t border-color-3 shadow-soft">
+                <ul className="space-y-5 text-color-2 text-lg">
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
+                      <span className="text-xs">01</span>
+                    </div>
+                    <span>Set up the development environment for the IT admin side</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
+                      <span className="text-xs">02</span>
+                    </div>
+                    <span>Developed frontend interfaces for each menu item in the IT admin sidebar</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
+                      <span className="text-xs">03</span>
+                    </div>
+                    <span>Created responsive dashboard components for IT administrators</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
+                      <span className="text-xs">04</span>
+                    </div>
+                    <span>Implemented system monitoring and management interfaces</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="grid grid-cols-1 gap-6 my-8">
                 <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week10Image4} alt="Transition Planning" className="w-full h-64 object-cover" />
+                  <img src={Week10Image4} alt="IT Admin Development" className="w-full h-64 object-cover" />
                   <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Transition Planning</h4>
-                    <p className="text-sm text-color-2">Creating plans for smooth handover of ongoing projects.</p>
+                    <h4 className="text-lg font-bold text-color-1 mb-2">IT Admin Dashboard</h4>
+                    <p className="text-sm text-color-2">Developing the frontend interfaces for IT administrators.</p>
                   </div>
                 </div>
 
-                <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week10Image5} alt="Final Feedback" className="w-full h-64 object-cover" />
-                  <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Feedback Session</h4>
-                    <p className="text-sm text-color-2">Participating in final feedback sessions with mentors.</p>
-                  </div>
-                </div>
               </div>
+
+              <blockquote className="border-l-2 border-color-3 pl-4 py-2 my-6 bg-bg-tertiary/30 italic">
+                "The best way to learn is through hands-on experience and real-world challenges."
+                <cite className="block text-color-3 mt-2 not-italic">— Tech Mentor</cite>
+              </blockquote>
+
+              <p className="text-base text-color-2 mb-8 leading-relaxed">
+                Week 10 has been an incredibly diverse and enriching experience. The Innovation Summit provided me with valuable exposure to event technical management, while the IT admin development work allowed me to continue expanding my frontend development skills. Both experiences have contributed significantly to my professional growth during this internship.
+              </p>
             </article>
           </div>
         </div>

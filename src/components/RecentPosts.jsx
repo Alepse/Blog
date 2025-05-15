@@ -166,7 +166,7 @@ const PostCard = ({ post }) => {
           </div>
 
           {/* View button */}
-          <div className="inline-flex items-center gap-1">
+          <div className="inline-flex items-center gap-1 cursor-pointer">
             <span className="text-xs font-medium text-white">VIEW</span>
             <ArrowRight
               size={14}

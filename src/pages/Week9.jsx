@@ -81,10 +81,10 @@ const Week9 = () => {
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-color-1 mb-3 font-secondary animate-fadeIn" style={{ animationDelay: '0.3s' }}>
-                Project Leadership
+                HR Frontend & Event Tech
               </h1>
               <p className="text-color-2 max-w-2xl animate-fadeIn" style={{ animationDelay: '0.4s' }}>
-                Taking on leadership responsibilities in team projects during my ninth week.
+                Developing HR interfaces and preparing for the DOST-V Innovation Summit during my ninth week.
               </p>
             </div>
           </div>
@@ -112,7 +112,7 @@ const Week9 = () => {
                       <Code className="mr-2 text-color-3 mt-1" size={16} />
                       <div>
                         <span className="block text-sm font-medium text-color-1">Focus</span>
-                        <span className="text-sm text-color-2">Project Leadership</span>
+                        <span className="text-sm text-color-2">HR Frontend & Event Preparation</span>
                       </div>
                     </li>
                   </ul>
@@ -142,19 +142,19 @@ const Week9 = () => {
                 </div>
                 <div className="flex items-center gap-1">
                   <Tag size={16} className="text-color-3" />
-                  <span>Leadership</span>
+                  <span>HR Frontend & Event Tech</span>
                 </div>
               </div>
 
               <p className="text-lg text-color-1 mb-8 leading-relaxed border-l border-color-3 pl-6 py-3 bg-bg-tertiary/30">
-                During Week 9, I took on increased leadership responsibilities within our project team, guiding key aspects of our knowledge management portal development.
+                During Week 9, I focused on developing the frontend for the HR side of our application and was assigned to handle live streaming and technical aspects for the DOST-V Innovation Summit event.
               </p>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                This week marked a significant shift in my role as I transitioned from primarily executing tasks to helping coordinate team efforts, making critical decisions, and representing our team in stakeholder meetings. This opportunity to lead has been both challenging and rewarding.
+                The week was divided into two distinct parts. From Monday to Wednesday, I concentrated on developing the frontend interfaces for each menu item in the HR sidebar. Then on Thursday and Friday, our team participated in meetings for the upcoming DOST-V Innovation Summit, where I was assigned to handle the live streaming and technical aspects of the event.
               </p>
 
-              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Leadership Responsibilities</h2>
+              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">HR Frontend Development (Mon-Wed)</h2>
 
               <div className="bg-bg-tertiary p-8 my-10 border-l border-t border-color-3 shadow-soft">
                 <ul className="space-y-5 text-color-2 text-lg">
@@ -162,84 +162,110 @@ const Week9 = () => {
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">01</span>
                     </div>
-                    <span>Led daily stand-up meetings and coordinated team tasks</span>
+                    <span>Developed frontend interfaces for each menu item in the HR sidebar</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">02</span>
                     </div>
-                    <span>Presented project progress to stakeholders and gathered requirements</span>
+                    <span>Created responsive dashboard components for HR administrators</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">03</span>
                     </div>
-                    <span>Made critical technical decisions about implementation approaches</span>
+                    <span>Implemented data visualization elements for HR analytics</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">04</span>
                     </div>
-                    <span>Mentored junior team members on technical challenges</span>
+                    <span>Built form interfaces for employee management and data entry</span>
                   </li>
                 </ul>
               </div>
 
-              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Challenges and Growth</h2>
+              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">DOST-V Innovation Summit Preparation (Thu-Fri)</h2>
+
+              <div className="bg-bg-tertiary p-8 my-10 border-l border-t border-color-3 shadow-soft">
+                <ul className="space-y-5 text-color-2 text-lg">
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
+                      <span className="text-xs">01</span>
+                    </div>
+                    <span>Assigned to handle live streaming for the DOST-V Innovation Summit</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
+                      <span className="text-xs">02</span>
+                    </div>
+                    <span>Responsible for technical aspects of the event setup</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
+                      <span className="text-xs">03</span>
+                    </div>
+                    <span>Participated in planning meetings for event logistics</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
+                      <span className="text-xs">04</span>
+                    </div>
+                    <span>Collaborated with team members on task assignments</span>
+                  </li>
+                </ul>
+              </div>
+
+              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Technical Challenges</h2>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                Taking on a leadership role presented new challenges. Balancing technical work with coordination responsibilities required careful time management. I also had to develop my communication skills to effectively convey technical concepts to non-technical stakeholders.
+                The week presented diverse technical challenges. For the HR frontend development, I needed to ensure consistent design across multiple interfaces while implementing complex functionality. For the Innovation Summit preparation, I had to plan for reliable live streaming setup and anticipate potential technical issues that might arise during the event.
               </p>
-
-              <blockquote className="border-l-2 border-color-3 pl-4 py-2 my-6 bg-bg-tertiary/30 italic">
-                "Leadership is not about being in charge. It's about taking care of those in your charge."
-                <cite className="block text-color-3 mt-2 not-italic">— Simon Sinek</cite>
-              </blockquote>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
                 <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week9Image2} alt="Team Leadership" className="w-full h-64 object-cover" />
+                  <img src={Week9Image2} alt="HR Frontend Development" className="w-full h-64 object-cover" />
                   <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Team Coordination</h4>
-                    <p className="text-sm text-color-2">Leading daily stand-up meetings and coordinating tasks.</p>
+                    <h4 className="text-lg font-bold text-color-1 mb-2">HR Dashboard</h4>
+                    <p className="text-sm text-color-2">Developing the frontend interfaces for HR administrators.</p>
                   </div>
                 </div>
 
                 <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week9Image3} alt="Stakeholder Presentation" className="w-full h-64 object-cover" />
+                  <img src={Week9Image3} alt="HR Menu Items" className="w-full h-64 object-cover" />
                   <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Stakeholder Meetings</h4>
-                    <p className="text-sm text-color-2">Presenting project progress to key stakeholders.</p>
+                    <h4 className="text-lg font-bold text-color-1 mb-2">Menu Components</h4>
+                    <p className="text-sm text-color-2">Creating interfaces for each menu item in the HR sidebar.</p>
                   </div>
                 </div>
               </div>
 
-              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Leadership Outcomes</h2>
+              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Innovation Summit Responsibilities</h2>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                My leadership efforts resulted in several positive outcomes for the team and project. We were able to streamline our development process, improve communication with stakeholders, and make faster progress on key features. The experience also helped me develop important soft skills that will be valuable throughout my career.
+                Being assigned to handle the live streaming and technical aspects of the DOST-V Innovation Summit is an exciting opportunity. During our meetings on Thursday and Friday, we discussed the event requirements, technical setup, and contingency plans. This role will allow me to apply my technical skills in a different context while contributing to an important event.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
                 <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week9Image4} alt="Technical Mentoring" className="w-full h-64 object-cover" />
+                  <img src={Week9Image4} alt="Event Planning" className="w-full h-64 object-cover" />
                   <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Technical Mentoring</h4>
-                    <p className="text-sm text-color-2">Guiding team members through complex technical challenges.</p>
+                    <h4 className="text-lg font-bold text-color-1 mb-2">Event Planning</h4>
+                    <p className="text-sm text-color-2">Participating in meetings to plan the Innovation Summit.</p>
                   </div>
                 </div>
 
                 <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week9Image5} alt="Decision Making" className="w-full h-64 object-cover" />
+                  <img src={Week9Image5} alt="Live Streaming Setup" className="w-full h-64 object-cover" />
                   <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Decision Making</h4>
-                    <p className="text-sm text-color-2">Making critical technical and project management decisions.</p>
+                    <h4 className="text-lg font-bold text-color-1 mb-2">Technical Setup</h4>
+                    <p className="text-sm text-color-2">Planning the live streaming and technical aspects of the event.</p>
                   </div>
                 </div>
               </div>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                As I approach the final weeks of my internship, I'm grateful for this opportunity to develop leadership skills. The experience has given me a broader perspective on software development beyond just coding, and I look forward to applying these skills in future roles.
+                Week 9 has been a diverse and enriching experience, allowing me to continue developing my frontend skills while also taking on new responsibilities related to event technical support. The combination of HR frontend development and preparation for the DOST-V Innovation Summit has broadened my skill set and given me exposure to different aspects of technical work in a professional environment.
               </p>
             </article>
           </div>

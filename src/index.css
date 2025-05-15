@@ -98,3 +98,21 @@ a:hover {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--color-accent-2);
 }
+
+/* Custom scrollbar for weekly logs */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: var(--bg-tertiary);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--color-3);
+    border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent-2);
+}

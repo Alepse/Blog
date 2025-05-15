@@ -1,21 +1,26 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {
-  Github,
-  Linkedin,
   Mail,
-  Twitter,
-  Instagram,
   Heart,
   ArrowUp,
-  ExternalLink
+  Share2,
+  MessageSquare,
+  Globe,
+  User
 } from 'lucide-react';
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
+  };
+
+  const handleNavigation = (path) => {
+    navigate(path, { state: { scrollToTop: true } });
   };
 
   const currentYear = new Date().getFullYear();
@@ -35,10 +40,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, label: 'GitHub', href: 'https://github.com' },
-    { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com' },
-    { icon: Twitter, label: 'Twitter', href: 'https://twitter.com' },
-    { icon: Instagram, label: 'Instagram', href: 'https://instagram.com' },
+    { icon: Globe, label: 'Website', href: 'https://github.com' },
+    { icon: User, label: 'Profile', href: 'https://linkedin.com' },
+    { icon: Share2, label: 'Share', href: 'https://twitter.com' },
+    { icon: MessageSquare, label: 'Message', href: 'https://instagram.com' },
     { icon: Mail, label: 'Email', href: 'mailto:contact@example.com' },
   ];
 
@@ -62,7 +67,7 @@ const Footer = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-color-2 hover:text-color-3 transition-colors duration-normal bg-bg-secondary p-2"
+                    className="text-color-2 hover:text-color-3 transition-colors duration-normal bg-bg-secondary p-2 cursor-pointer"
                     aria-label={social.label}
                   >
                     <Icon size={20} />
@@ -77,28 +82,16 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4 text-color-1 bg-color-3 inline-block px-4 py-1">QUICK LINKS</h3>
             <ul className="space-y-0 border-l-2 border-color-3">
               <li>
-                <Link to="/" className="text-color-2 hover:text-color-3 transition-colors duration-normal flex items-center gap-2 bg-bg-tertiary p-2 border-b border-color-3/10">
+                <button onClick={() => handleNavigation('/')} className="text-color-2 hover:text-color-3 transition-colors duration-normal flex items-center gap-2 bg-bg-tertiary p-2 border-b border-color-3/10 w-full text-left cursor-pointer">
                   <span className="w-3 h-3 bg-color-3"></span>
                   HOME
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/week1" className="text-color-2 hover:text-color-3 transition-colors duration-normal flex items-center gap-2 bg-bg-tertiary p-2 border-b border-color-3/10">
+                <button onClick={() => handleNavigation('/week1')} className="text-color-2 hover:text-color-3 transition-colors duration-normal flex items-center gap-2 bg-bg-tertiary p-2 border-b border-color-3/10 w-full text-left cursor-pointer">
                   <span className="w-3 h-3 bg-color-3"></span>
                   WEEKLY LOGS
-                </Link>
-              </li>
-              <li>
-                <a href="#" className="text-color-2 hover:text-color-3 transition-colors duration-normal flex items-center gap-2 bg-bg-tertiary p-2 border-b border-color-3/10">
-                  <span className="w-3 h-3 bg-color-3"></span>
-                  ABOUT ME
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-color-2 hover:text-color-3 transition-colors duration-normal flex items-center gap-2 bg-bg-tertiary p-2">
-                  <span className="w-3 h-3 bg-color-3"></span>
-                  CONTACT
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -106,42 +99,43 @@ const Footer = () => {
           {/* Column 3: Weekly Logs */}
           <div>
             <h3 className="text-xl font-bold mb-4 text-color-1 bg-color-3 inline-block px-4 py-1">WEEKLY LOGS</h3>
-            <div className="border-l-2 border-color-3 bg-bg-tertiary">
-              {weekPages.slice(0, 6).map((week, index) => (
-                <Link
+            <div className="border-l-2 border-color-3 bg-bg-tertiary max-h-[250px] overflow-y-auto custom-scrollbar pr-1">
+              {weekPages.map((week, index) => (
+                <button
                   key={index}
-                  to={week.path}
-                  className="text-color-2 hover:text-color-3 transition-colors duration-normal flex items-center justify-between p-2 border-b border-color-3/10"
+                  onClick={() => handleNavigation(week.path)}
+                  className="text-color-2 hover:text-color-3 transition-colors duration-normal flex items-center justify-between p-2 border-b border-color-3/10 hover:bg-bg-secondary w-full text-left cursor-pointer"
                 >
-                  <div className="flex items-center gap-2">
-                    <span className="w-6 h-6 bg-bg-secondary flex items-center justify-center text-color-3 text-xs font-bold">{index + 1}</span>
-                    <span>{week.label}</span>
+                  <div className="flex items-center">
+                    <span className="pl-1">{week.label}</span>
                   </div>
-                  <span className="text-xs text-color-2/70 bg-bg-secondary px-2 py-1">{week.dates}</span>
-                </Link>
+                  <span className="text-xs text-color-2/70 bg-bg-secondary px-2 py-1 rounded-sm">{week.dates}</span>
+                </button>
               ))}
             </div>
           </div>
 
           {/* Column 4: Newsletter */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-color-1 bg-color-3 inline-block px-4 py-1">STAY UPDATED</h3>
-            <p className="text-color-2 mb-4 border-l-2 border-color-3 pl-4 py-2 bg-bg-tertiary/30">Subscribe to receive updates about my internship journey.</p>
-            <form className="space-y-2 border-l-2 border-t-2 border-color-3 p-4 bg-bg-tertiary/30">
-              <div>
-                <input
-                  type="email"
-                  placeholder="Your email address"
-                  className="w-full px-4 py-2 bg-bg-secondary text-color-1 border-l-2 border-color-3 focus:outline-none"
-                />
+            <h3 className="text-xl font-bold mb-4 text-color-1 bg-color-3 inline-block px-4 py-1">CONTACT ME</h3>
+            <p className="text-color-2 mb-4 border-l-2 border-color-3 pl-4 py-2 bg-bg-tertiary/30">
+              Feel free to reach out if you have any questions about my internship journey.
+            </p>
+
+            <div className="border-l-2 border-t-2 border-color-3 p-4 bg-bg-tertiary/30">
+              <div className="flex items-center gap-3 mb-3 bg-bg-secondary p-3 border-l-2 border-color-3">
+                <Mail className="text-color-3" size={20} />
+                <span className="text-color-1">kenespela@gmail.com</span>
               </div>
-              <button
-                type="submit"
-                className="w-full bg-color-3 hover:bg-color-accent-2 text-bg-primary py-2 px-4 transition-colors duration-normal border-l-2 border-t-2 border-bg-primary"
+
+              <a
+                href="mailto:kenespela@gmail.com?subject=Internship%20Blog%20Inquiry"
+                className="flex justify-center items-center gap-2 w-full bg-color-3 hover:bg-color-accent-2 text-bg-primary py-3 px-4 transition-colors duration-normal border-l-2 border-t-2 border-bg-primary cursor-pointer"
               >
-                SUBSCRIBE
-              </button>
-            </form>
+                <Mail size={18} />
+                <span>SEND EMAIL</span>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -157,7 +151,7 @@ const Footer = () => {
           <div className="flex items-center gap-4">
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-2 text-color-2 hover:text-color-3 transition-colors duration-normal group bg-bg-tertiary p-2 border-l-2 border-color-3"
+              className="flex items-center gap-2 text-color-2 hover:text-color-3 transition-colors duration-normal group bg-bg-tertiary p-2 border-l-2 border-color-3 cursor-pointer"
               aria-label="Scroll to top"
             >
               <span>BACK TO TOP</span>

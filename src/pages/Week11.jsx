@@ -4,11 +4,9 @@ import Nav from '../components/nav';
 import WeekNavButton from '../components/WeekNavButton';
 import Footer from '../components/Footer';
 import { Calendar, Clock, User, Tag, ArrowUp, BookOpen, Code } from 'lucide-react';
-import Week10Image1 from '../assets/Week10/week10.1.jpg';
-import Week10Image2 from '../assets/Week10/week10.2.JPG';
-import Week10Image3 from '../assets/Week10/week10.3.jpg';
-import Week10Image4 from '../assets/Week10/week10.4.JPG';
-import Week10Image5 from '../assets/Week10/week10.5.JPG';
+import Week11Image1 from '../assets/Week11/week11.1.jpg';
+import Week11Image2 from '../assets/Week11/week11.2.JPG';
+
 
 const Week11 = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -60,7 +58,7 @@ const Week11 = () => {
           {/* Hero Section */}
           <div className={`relative h-[550px] overflow-hidden border-l border-t border-color-3 shadow-card transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <img
-              src={Week10Image1}
+              src={Week11Image1}
               alt="Week 11 - Wrapping Up"
               className="w-full h-full object-cover"
             />
@@ -81,10 +79,10 @@ const Week11 = () => {
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-color-1 mb-3 font-secondary animate-fadeIn" style={{ animationDelay: '0.3s' }}>
-                Wrapping Up
+                UI/UX Refinements
               </h1>
               <p className="text-color-2 max-w-2xl animate-fadeIn" style={{ animationDelay: '0.4s' }}>
-                Completing final tasks and reflecting on the entire internship experience.
+                Polishing the user interface and enhancing the user experience in the final week.
               </p>
             </div>
           </div>
@@ -112,7 +110,7 @@ const Week11 = () => {
                       <Code className="mr-2 text-color-3 mt-1" size={16} />
                       <div>
                         <span className="block text-sm font-medium text-color-1">Focus</span>
-                        <span className="text-sm text-color-2">Final Reflection</span>
+                        <span className="text-sm text-color-2">UI/UX Refinements</span>
                       </div>
                     </li>
                   </ul>
@@ -142,19 +140,19 @@ const Week11 = () => {
                 </div>
                 <div className="flex items-center gap-1">
                   <Tag size={16} className="text-color-3" />
-                  <span>Reflection</span>
+                  <span>UI/UX Design</span>
                 </div>
               </div>
 
               <p className="text-lg text-color-1 mb-8 leading-relaxed border-l border-color-3 pl-6 py-3 bg-bg-tertiary/30">
-                As my internship comes to a close, I'm taking time to reflect on everything I've learned and accomplished over these past 11 weeks. It's been an incredible journey of growth, challenges, and achievements.
+                During Week 11, I focused on making UI/UX adjustments and refinements to enhance the overall user experience of our application.
               </p>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                During this final week, I focused on wrapping up my projects, documenting my work, and preparing for the transition. I had the opportunity to present my work to the team and receive valuable feedback that will help me in my future career.
+                As we approached the end of the project, this final week was dedicated to polishing the user interface and improving the user experience. I worked on refining visual elements, ensuring consistency across all pages, and implementing subtle enhancements that make the application more intuitive and user-friendly.
               </p>
 
-              <h3 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Internship Highlights</h3>
+              <h3 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">UI/UX Improvements</h3>
 
               <div className="bg-bg-tertiary p-8 my-10 border-l border-t border-color-3 shadow-soft">
                 <ul className="space-y-5 text-color-2 text-lg">
@@ -162,89 +160,57 @@ const Week11 = () => {
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">01</span>
                     </div>
-                    <span>Successfully completed the knowledge management portal project</span>
+                    <span>Enhanced visual consistency across all interfaces (employee, HR, and IT admin)</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">02</span>
                     </div>
-                    <span>Developed strong technical skills in frontend development</span>
+                    <span>Improved navigation elements for better user flow and accessibility</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">03</span>
                     </div>
-                    <span>Gained valuable experience in team collaboration and project management</span>
+                    <span>Refined form elements with better validation and user feedback</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
-                      <span className="text-xs">04</span>
-                    </div>
-                    <span>Received positive feedback from supervisors and stakeholders</span>
-                  </li>
+              
                 </ul>
               </div>
 
-              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Final Week Activities</h2>
+              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">UI/UX Refinement Process</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
                 <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week10Image2} alt="Final Presentation" className="w-full h-64 object-cover" />
+                  <img src={Week11Image2} alt="UI/UX Adjustments" className="w-full h-64 object-cover" />
                   <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Final Project Presentation</h4>
-                    <p className="text-sm text-color-2">Presenting the results of my internship projects to the team.</p>
+                    <h4 className="text-lg font-bold text-color-1 mb-2">Visual Consistency</h4>
+                   
                   </div>
                 </div>
 
+              
+
+            
+
+
+          
+              
+
                 <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week10Image3} alt="Team Celebration" className="w-full h-64 object-cover" />
+                  <img src={Week11Image1} alt="Final Thoughts" className="w-full h-64 object-cover" />
                   <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Team Celebration</h4>
-                    <p className="text-sm text-color-2">Celebrating the successful completion of our projects.</p>
+                    <h4 className="text-lg font-bold text-color-1 mb-2">Content Brainstorming in IT Admin Side</h4>
                   </div>
                 </div>
               </div>
 
-              <blockquote className="border-l-2 border-color-3 pl-4 py-2 my-6 bg-bg-tertiary/30 italic">
-                "The end of an internship is not the end of learning, but the beginning of applying what you've learned."
-                <cite className="block text-color-3 mt-2 not-italic">— Mentor's Advice</cite>
-              </blockquote>
-
-              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Looking Forward</h2>
+              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Reflection on UI/UX Skills</h2>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                This internship has been a transformative experience that has shaped my professional goals and aspirations. I'm leaving with a clearer vision of my career path and the confidence to pursue it.
+                Working on these UI/UX refinements has significantly enhanced my understanding of user-centered design principles. I've learned that great user experiences come from attention to detail and a deep understanding of user needs and behaviors. These skills will be invaluable as I continue to develop as a frontend developer.
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
-                <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week10Image4} alt="Skills Gained" className="w-full h-48 object-cover" />
-                  <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Skills Gained</h4>
-                    <p className="text-sm text-color-2">Reflecting on new skills acquired during the internship.</p>
-                  </div>
-                </div>
-
-                <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week10Image5} alt="Future Plans" className="w-full h-48 object-cover" />
-                  <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Future Plans</h4>
-                    <p className="text-sm text-color-2">Planning next steps after completing the internship.</p>
-                  </div>
-                </div>
-
-                <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week10Image1} alt="Final Thoughts" className="w-full h-48 object-cover" />
-                  <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Final Thoughts</h4>
-                    <p className="text-sm text-color-2">Summarizing the overall internship experience.</p>
-                  </div>
-                </div>
-              </div>
-
-              <p className="text-base text-color-2 mb-8 leading-relaxed">
-                I'm grateful for the opportunity to have been part of this organization and to have worked with such talented and supportive colleagues. The knowledge and experience I've gained will be invaluable as I move forward in my career.
-              </p>
             </article>
           </div>
         </div>

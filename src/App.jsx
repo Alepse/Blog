@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Week1 from './pages/Week1';
 import Week2 from './pages/Week2';
@@ -13,10 +13,22 @@ import Week9 from './pages/Week9';
 import Week10 from './pages/Week10';
 import Week11 from './pages/Week11';
 
+// ScrollToTop component to handle scrolling on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 const App = () => {
   return (
     <div className="min-h-screen">
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/week1" element={<Week1 />} />

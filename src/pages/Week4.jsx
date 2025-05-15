@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Nav from '../components/nav';
 import WeekNavButton from '../components/WeekNavButton';
 import Footer from '../components/Footer';
-import { Calendar, Clock, User, Tag, ArrowUp, BookOpen, Code, Coffee } from 'lucide-react';
+import { Calendar, Clock, User, ArrowUp, BookOpen, Coffee, Server, Users } from 'lucide-react';
 import Week4Image1 from '../assets/Week4/week4.1.jpg';
 import Week4Image2 from '../assets/Week4/week4.2.jpg';
 import Week4Image3 from '../assets/Week4/week4.3.jpg';
@@ -61,8 +61,8 @@ const Week4 = () => {
           {/* Hero Section */}
           <div className={`relative h-[550px] overflow-hidden border-l border-t border-color-3 shadow-card transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <img
-              src={Week4Image1}
-              alt="Week 4 - Team Collaboration"
+              src={Week4Image3}
+              alt="Week 4 - Server Upgrades & Farewells"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
@@ -82,10 +82,10 @@ const Week4 = () => {
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-color-1 mb-3 font-secondary animate-fadeIn" style={{ animationDelay: '0.3s' }}>
-                Team Collaboration
+                Server Upgrades & Farewells
               </h1>
               <p className="text-color-2 max-w-2xl animate-fadeIn" style={{ animationDelay: '0.4s' }}>
-                Working with the team on collaborative projects and learning from peers.
+                Learning technical server skills and celebrating team connections through a special farewell.
               </p>
             </div>
           </div>
@@ -110,10 +110,10 @@ const Week4 = () => {
                       </div>
                     </li>
                     <li className="flex items-start">
-                      <Code className="mr-2 text-color-3 mt-1" size={16} />
+                      <Server className="mr-2 text-color-3 mt-1" size={16} />
                       <div>
-                        <span className="block text-sm font-medium text-color-1">Status</span>
-                        <span className="text-sm text-color-2">Coming Soon</span>
+                        <span className="block text-sm font-medium text-color-1">Focus</span>
+                        <span className="text-sm text-color-2">Server Upgrades & Team Events</span>
                       </div>
                     </li>
                   </ul>
@@ -135,29 +135,33 @@ const Week4 = () => {
               <div className="flex flex-wrap gap-4 text-sm text-color-2 mb-10 bg-bg-tertiary p-4 border-l border-color-3">
                 <div className="flex items-center gap-1">
                   <Clock size={16} className="text-color-3" />
-                  <span>5 min read</span>
+                  <span>6 min read</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <User size={16} className="text-color-3" />
                   <span>Kenneth Espela</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <Tag size={16} className="text-color-3" />
-                  <span>Collaboration</span>
+                  <Server size={16} className="text-color-3" />
+                  <span>Server Upgrades</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Users size={16} className="text-color-3" />
+                  <span>Team Events</span>
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-color-1 mt-12 mb-6 font-secondary">Team Collaboration</h2>
+              <h2 className="text-3xl font-bold text-color-1 mt-12 mb-6 font-secondary">Server Upgrade Lecture & Team Events</h2>
 
               <p className="text-lg text-color-1 mb-8 leading-relaxed border-l border-color-3 pl-6 py-3 bg-bg-tertiary/30">
-                Week 4 was all about team collaboration and working together to solve complex problems. I had the opportunity to work closely with other team members on our knowledge management portal project.
+                Week 4 was highlighted by an insightful server upgrade lecture with our mentor and a special farewell celebration for one of our DOST-V colleagues who had been instrumental in helping with our agency application.
               </p>
 
               <p className="text-lg text-color-2 mb-8 leading-relaxed">
-                This week, we focused on integrating our individual components into a cohesive system. The collaborative environment allowed us to share ideas, provide feedback, and learn from each other's expertise.
+                This week brought valuable technical knowledge through specialized training sessions and strengthened our team bonds through shared experiences. The mix of professional development and social interaction created a well-rounded week of growth.
               </p>
 
-              <h3 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Collaborative Achievements</h3>
+              <h3 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Server Upgrade Lecture Highlights</h3>
 
               <div className="bg-bg-tertiary p-8 my-10 border-l border-t border-color-3 shadow-soft">
                 <ul className="space-y-5 text-color-2 text-lg">
@@ -165,86 +169,85 @@ const Week4 = () => {
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">01</span>
                     </div>
-                    <span>Successfully integrated frontend components with backend APIs</span>
+                    <span>Comprehensive overview of server architecture and upgrade pathways</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">02</span>
                     </div>
-                    <span>Implemented real-time collaboration features for document editing</span>
+                    <span>Best practices for maintaining system stability during upgrades</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">03</span>
                     </div>
-                    <span>Resolved cross-browser compatibility issues through team problem-solving</span>
+                    <span>Hands-on demonstration of backup procedures and rollback strategies</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">04</span>
                     </div>
-                    <span>Conducted peer code reviews to ensure quality and knowledge sharing</span>
+                    <span>Performance optimization techniques for upgraded server environments</span>
                   </li>
                 </ul>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
                 <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week4Image2} alt="Team Meeting" className="w-full h-64 object-cover" />
+                  <img src={Week4Image2} alt="Server Upgrade Lecture" className="w-full h-64 object-cover" />
                   <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Team Meetings</h4>
-                    <p className="text-sm text-color-2">Daily stand-ups helped us stay aligned and address challenges quickly.</p>
+                    <h4 className="text-lg font-bold text-color-1 mb-2">Technical Training</h4>
+                    <p className="text-sm text-color-2">Our mentor provided in-depth knowledge on server architecture and upgrade procedures.</p>
                   </div>
                 </div>
 
                 <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week4Image3} alt="Pair Programming" className="w-full h-64 object-cover" />
+                  <img src={Week4Image6} alt="Hands-on Learning" className="w-full h-64 object-cover" />
                   <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Pair Programming</h4>
-                    <p className="text-sm text-color-2">Working together on complex problems improved our code quality.</p>
+                    <h4 className="text-lg font-bold text-color-1 mb-2">Hands-on Learning</h4>
+                    <p className="text-sm text-color-2">Practical exercises helped solidify our understanding of server management concepts.</p>
                   </div>
                 </div>
               </div>
 
-              <h3 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Collaborative Tools & Techniques</h3>
+              <h3 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">DOST-V Colleague Farewell</h3>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                We utilized various tools and techniques to enhance our collaboration. Git for version control, Jira for task management, and Slack for communication were essential to our workflow. We also implemented agile methodologies, including daily stand-ups and sprint planning.
+                This week, we organized a special farewell celebration for our colleague from DOST-V who had been instrumental in helping with our agency application process. The small gathering allowed us to express our gratitude for their support and guidance during our time together. We shared food, stories, and well-wishes for their future endeavors.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
                 <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week4Image4} alt="Code Review" className="w-full h-48 object-cover" />
+                  <img src={Week4Image1} alt="Farewell Celebration" className="w-full h-48 object-cover" />
                   <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Code Reviews</h4>
-                    <p className="text-sm text-color-2">Regular peer reviews improved code quality.</p>
+                    <h4 className="text-lg font-bold text-color-1 mb-2">Farewell Celebration</h4>
+                    <p className="text-sm text-color-2">Sharing a meal together to celebrate our colleague's contributions.</p>
                   </div>
                 </div>
 
                 <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week4Image5} alt="Sprint Planning" className="w-full h-48 object-cover" />
+                  <img src={Week4Image4} alt="Team Bonding" className="w-full h-48 object-cover" />
                   <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Sprint Planning</h4>
-                    <p className="text-sm text-color-2">Setting clear goals for each sprint period.</p>
+                    <h4 className="text-lg font-bold text-color-1 mb-2">Team Bonding</h4>
+                    <p className="text-sm text-color-2">Strengthening relationships through shared experiences.</p>
                   </div>
                 </div>
 
                 <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week4Image6} alt="Knowledge Sharing" className="w-full h-48 object-cover" />
+                  <img src={Week4Image5} alt="Food Sharing" className="w-full h-48 object-cover" />
                   <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Knowledge Sharing</h4>
-                    <p className="text-sm text-color-2">Learning from each other's expertise and experiences.</p>
+                    <h4 className="text-lg font-bold text-color-1 mb-2">Food & Memories</h4>
+                    <p className="text-sm text-color-2">Enjoying food together while creating lasting memories.</p>
                   </div>
                 </div>
               </div>
 
-              <blockquote className="border-l-2 border-color-3 pl-4 py-2 my-6 bg-bg-tertiary/30 italic">
-                "Talent wins games, but teamwork and intelligence win championships."
-                <cite className="block text-color-3 mt-2 not-italic">— Michael Jordan</cite>
-              </blockquote>
+              <h3 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Key Learnings from Week 4</h3>
+
+              
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                The collaborative experience this week has been invaluable. I've learned that effective communication and mutual respect are key to successful team projects. As we move forward, I'm excited to continue building on these relationships and further enhancing our collaborative processes.
+                Week 4 was a perfect blend of technical growth and interpersonal connection. The server upgrade lecture expanded my technical knowledge, while the farewell celebration reminded me of the importance of professional relationships. I'm grateful for both the technical skills and the human connections that continue to shape my internship experience.
               </p>
             </article>
           </div>

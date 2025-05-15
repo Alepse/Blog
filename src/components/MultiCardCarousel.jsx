@@ -186,7 +186,7 @@ const MultiCardCarousel = ({
         <>
           <button
             onClick={goToPrev}
-            className="absolute left-1 sm:left-2 md:left-4 top-1/2 -translate-y-1/2 bg-bg-secondary text-color-1 hover:bg-color-3 hover:text-bg-primary p-1 sm:p-2 md:p-3 transition-all duration-normal border-l-2 sm:border-l-4 border-t-2 sm:border-t-4 border-color-3 focus:outline-none z-10 shadow-card"
+            className="absolute left-1 sm:left-2 md:left-4 top-1/2 -translate-y-1/2 bg-bg-secondary text-color-1 hover:bg-color-3 hover:text-bg-primary p-1 sm:p-2 md:p-3 transition-all duration-normal border-l-2 sm:border-l-4 border-t-2 sm:border-t-4 border-color-3 focus:outline-none z-10 shadow-card cursor-pointer"
             aria-label="Previous slide"
             disabled={isTransitioning}
           >
@@ -194,7 +194,7 @@ const MultiCardCarousel = ({
           </button>
           <button
             onClick={goToNext}
-            className="absolute right-1 sm:right-2 md:right-4 top-1/2 -translate-y-1/2 bg-bg-secondary text-color-1 hover:bg-color-3 hover:text-bg-primary p-1 sm:p-2 md:p-3 transition-all duration-normal border-l-2 sm:border-l-4 border-t-2 sm:border-t-4 border-color-3 focus:outline-none z-10 shadow-card"
+            className="absolute right-1 sm:right-2 md:right-4 top-1/2 -translate-y-1/2 bg-bg-secondary text-color-1 hover:bg-color-3 hover:text-bg-primary p-1 sm:p-2 md:p-3 transition-all duration-normal border-l-2 sm:border-l-4 border-t-2 sm:border-t-4 border-color-3 focus:outline-none z-10 shadow-card cursor-pointer"
             aria-label="Next slide"
             disabled={isTransitioning}
           >
@@ -210,7 +210,7 @@ const MultiCardCarousel = ({
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`h-2 sm:h-3 md:h-4 transition-all duration-normal flex-shrink-0 ${
+              className={`h-2 sm:h-3 md:h-4 transition-all duration-normal flex-shrink-0 cursor-pointer ${
                 index === currentIndex
                   ? 'bg-color-3 w-4 sm:w-6 md:w-8 border-l-2 sm:border-l-4 border-t-2 sm:border-t-4 border-bg-primary shadow-soft'
                   : 'bg-bg-secondary w-2 sm:w-3 md:w-4 border-l-1 sm:border-l-2 border-t-1 sm:border-t-2 border-color-3 hover:bg-bg-tertiary'

@@ -210,17 +210,17 @@ const Week1 = () => {
                 </div>
               </div>
 
-              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Team Building Activities</h2>
+              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Activities</h2>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                We participated in several team-building activities designed to help us get to know each other better. These activities were not only fun but also helped us understand the importance of collaboration and communication in a professional setting.
+                We had an activity where we set up PCs, installed software, and also installed switches in the server room
               </p>
 
               <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden my-8">
                 <img src={pic3} className="w-full h-64 object-cover" alt="Team Building" />
                 <div className="p-4">
                   <h4 className="text-lg font-bold text-color-1 mb-2">Team Activities</h4>
-                  <p className="text-sm text-color-2">Building relationships through collaborative activities.</p>
+                  <p className="text-sm text-color-2">Building new experiences through collaborative activities.</p>
                 </div>
               </div>
 

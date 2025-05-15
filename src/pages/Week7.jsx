@@ -78,10 +78,10 @@ const Week7 = () => {
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-color-1 mb-3 font-secondary animate-fadeIn" style={{ animationDelay: '0.3s' }}>
-                Mid-Internship Review
+                Next.js & Employee Dashboard
               </h1>
               <p className="text-color-2 max-w-2xl animate-fadeIn" style={{ animationDelay: '0.4s' }}>
-                Reflecting on progress and setting goals for the second half of my internship.
+                Deepening my Next.js knowledge and developing the employee dashboard with UI/UX improvements.
               </p>
             </div>
           </div>
@@ -109,7 +109,7 @@ const Week7 = () => {
                       <Code className="mr-2 text-color-3 mt-1" size={16} />
                       <div>
                         <span className="block text-sm font-medium text-color-1">Focus</span>
-                        <span className="text-sm text-color-2">Mid-Internship Evaluation</span>
+                        <span className="text-sm text-color-2">Next.js & Employee Dashboard</span>
                       </div>
                     </li>
                   </ul>
@@ -139,19 +139,19 @@ const Week7 = () => {
                 </div>
                 <div className="flex items-center gap-1">
                   <Tag size={16} className="text-color-3" />
-                  <span>Evaluation</span>
+                  <span>Next.js & UI/UX</span>
                 </div>
               </div>
 
               <p className="text-lg text-color-1 mb-8 leading-relaxed border-l border-color-3 pl-6 py-3 bg-bg-tertiary/30">
-                Week 7 marked the midpoint of my internship, a time for reflection on my progress and planning for the remaining weeks.
+                During Week 7, I continued to deepen my knowledge of Next.js while collaborating with my co-frontend developer to build the employee dashboard.
               </p>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                This week included a formal mid-internship review with my supervisor and team leads. We discussed my contributions so far, areas for improvement, and goals for the second half of the internship. The feedback was constructive and encouraging, giving me a clear direction for the weeks ahead.
+                Following our project migration to Next.js in Week 6, this week was focused on leveraging the framework's capabilities to develop the employee side of our application. Working closely with my co-frontend developer, we implemented key features and made several UI/UX adjustments to enhance the user experience. This collaborative effort allowed us to make significant progress while continuing to expand our technical skills.
               </p>
 
-              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Achievements So Far</h2>
+              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Next.js Development</h2>
 
               <div className="bg-bg-tertiary p-8 my-10 border-l border-t border-color-3 shadow-soft">
                 <ul className="space-y-5 text-color-2 text-lg">
@@ -159,50 +159,50 @@ const Week7 = () => {
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">01</span>
                     </div>
-                    <span>Successfully implemented key features in the knowledge management portal</span>
+                    <span>Deepened understanding of Next.js routing and server-side rendering capabilities</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">02</span>
                     </div>
-                    <span>Contributed to improving the user interface and experience</span>
+                    <span>Implemented TypeScript interfaces for improved type safety across components</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">03</span>
                     </div>
-                    <span>Developed problem-solving skills through overcoming technical challenges</span>
+                    <span>Created reusable components for the employee dashboard interface</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">04</span>
                     </div>
-                    <span>Enhanced collaboration skills through effective teamwork</span>
+                    <span>Utilized Next.js API routes to handle data fetching and state management</span>
                   </li>
                 </ul>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
                 <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week7Image1} alt="Mid-Internship Review" className="w-full h-64 object-cover" />
+                  <img src={Week7Image1} alt="Next.js Development" className="w-full h-64 object-cover" />
                   <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Performance Review</h4>
-                    <p className="text-sm text-color-2">Discussing progress and receiving feedback from supervisors.</p>
+                    <h4 className="text-lg font-bold text-color-1 mb-2">Employee Dashboard</h4>
+                    <p className="text-sm text-color-2">Developing the employee side of our application with Next.js.</p>
                   </div>
                 </div>
                 <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week7Image2} alt="Goal Setting" className="w-full h-64 object-cover" />
+                  <img src={Week7Image2} alt="UI/UX Improvements" className="w-full h-64 object-cover" />
                   <div className="p-4">
-                    <h4 className="text-lg font-bold text-color-1 mb-2">Goal Setting</h4>
-                    <p className="text-sm text-color-2">Planning objectives for the second half of the internship.</p>
+                    <h4 className="text-lg font-bold text-color-1 mb-2">UI/UX Adjustments</h4>
+                    <p className="text-sm text-color-2">Enhancing the user interface and experience of our application.</p>
                   </div>
                 </div>
               </div>
 
-              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Goals for the Second Half</h2>
+              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Employee Dashboard Development</h2>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                Based on the feedback received during the mid-internship review, I've set several goals for the remaining weeks:
+                Working alongside my co-frontend developer, we focused on building the employee side of our application with several key features:
               </p>
 
               <div className="bg-bg-tertiary p-8 my-10 border-l border-t border-color-3 shadow-soft">
@@ -211,36 +211,67 @@ const Week7 = () => {
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">01</span>
                     </div>
-                    <span>Take on more leadership responsibilities in team projects</span>
+                    <span>Employee profile management with editable fields and profile image uploads</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">02</span>
                     </div>
-                    <span>Learn and implement advanced development techniques</span>
+                    <span>Task management system with status tracking and priority indicators</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">03</span>
                     </div>
-                    <span>Focus on optimizing application performance</span>
+                    <span>Interactive dashboard with data visualization for employee performance</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">04</span>
                     </div>
-                    <span>Prepare for a smooth project handover at the end of the internship</span>
+                    <span>Notification system for important updates and task assignments</span>
                   </li>
                 </ul>
               </div>
 
-              <blockquote className="border-l-2 border-color-3 pl-4 py-2 my-6 bg-bg-tertiary/30 italic">
-                "The mid-point of any journey is a good time to reflect on how far you've come and to plan the path ahead."
-                <cite className="block text-color-3 mt-2 not-italic">— Supervisor Feedback</cite>
-              </blockquote>
+              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">UI/UX Improvements</h2>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                I'm grateful for the learning opportunities provided during the first half of my internship and excited about the challenges ahead. The mid-internship review has given me valuable insights and renewed motivation to make the most of the remaining weeks.
+                We made several UI/UX adjustments to enhance the user experience of our application:
+              </p>
+
+              <div className="bg-bg-tertiary p-8 my-10 border-l border-t border-color-3 shadow-soft">
+                <ul className="space-y-5 text-color-2 text-lg">
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
+                      <span className="text-xs">01</span>
+                    </div>
+                    <span>Redesigned navigation for improved accessibility and user flow</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
+                      <span className="text-xs">02</span>
+                    </div>
+                    <span>Implemented responsive design for optimal viewing on all device sizes</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
+                      <span className="text-xs">03</span>
+                    </div>
+                    <span>Enhanced form elements with validation and user-friendly feedback</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
+                      <span className="text-xs">04</span>
+                    </div>
+                    <span>Added subtle animations and transitions for a more engaging experience</span>
+                  </li>
+                </ul>
+              </div>
+
+        
+              <p className="text-base text-color-2 mb-8 leading-relaxed">
+                This week has been incredibly productive as we've made significant progress on the employee dashboard while continuing to deepen our understanding of Next.js and TypeScript. The collaborative work with my co-frontend developer has not only accelerated our development process but also provided valuable opportunities to learn from each other's approaches and techniques.
               </p>
             </article>
           </div>

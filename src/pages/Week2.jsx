@@ -175,7 +175,7 @@ const Week2 = () => {
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">03</span>
                     </div>
-                    <span>Team collaboration techniques</span>
+                    <span>Team Meetings</span>
                   </li>
                 </ul>
               </div>
@@ -217,10 +217,7 @@ const Week2 = () => {
                 Another challenge was optimizing the performance of the application, especially when handling large amounts of data. We implemented lazy loading and pagination techniques to improve the user experience.
               </p>
 
-              <blockquote className="border-l-2 border-color-3 pl-4 py-2 my-6 bg-bg-tertiary/30 italic">
-                "Good design is obvious. Great design is transparent."
-                <cite className="block text-color-3 mt-2 not-italic">— Joe Sparano</cite>
-              </blockquote>
+          
 
               <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Looking Forward</h2>
 

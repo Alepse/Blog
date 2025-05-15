@@ -78,10 +78,10 @@ const Week6 = () => {
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-color-1 mb-3 font-secondary animate-fadeIn" style={{ animationDelay: '0.3s' }}>
-                Problem Solving
+                Next.js & TypeScript
               </h1>
               <p className="text-color-2 max-w-2xl animate-fadeIn" style={{ animationDelay: '0.4s' }}>
-                Tackling complex challenges and finding innovative solutions during my sixth week.
+                Migrating our project to Next.js and learning TypeScript during my sixth week.
               </p>
             </div>
           </div>
@@ -109,7 +109,7 @@ const Week6 = () => {
                       <Code className="mr-2 text-color-3 mt-1" size={16} />
                       <div>
                         <span className="block text-sm font-medium text-color-1">Focus</span>
-                        <span className="text-sm text-color-2">Problem Solving</span>
+                        <span className="text-sm text-color-2">Next.js & TypeScript</span>
                       </div>
                     </li>
                   </ul>
@@ -139,16 +139,16 @@ const Week6 = () => {
                 </div>
                 <div className="flex items-center gap-1">
                   <Tag size={16} className="text-color-3" />
-                  <span>Problem Solving</span>
+                  <span>Next.js & TypeScript</span>
                 </div>
               </div>
 
               <p className="text-lg text-color-1 mb-8 leading-relaxed border-l border-color-3 pl-6 py-3 bg-bg-tertiary/30">
-                During Week 6, I focused on problem-solving and overcoming technical challenges in our project.
+                During Week 6, we faced the challenge of migrating our project to Next.js and implementing TypeScript, which provided valuable learning opportunities.
               </p>
 
               <p className="text-base text-color-2 mb-8">
-                This week was particularly challenging as we encountered several complex issues that required creative solutions and collaborative problem-solving approaches.
+                This week was particularly challenging as we undertook the significant task of migrating our existing project to the Next.js tech stack while simultaneously implementing TypeScript. The migration was necessary because our backend developer was facing difficulties connecting Laravel and React.js together, which was hindering our progress. Despite the challenges of learning new technologies, these changes allowed me to expand my technical skills and gain valuable experience with modern web development frameworks.
               </p>
 
               <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Key Challenges</h2>
@@ -159,19 +159,25 @@ const Week6 = () => {
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">01</span>
                     </div>
-                    <span>Debugging complex integration issues between frontend and backend systems</span>
+                    <span>Migrating our project to Next.js tech stack</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">02</span>
                     </div>
-                    <span>Optimizing database queries for better performance</span>
+                    <span>Learning and implementing TypeScript in our codebase</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
                       <span className="text-xs">03</span>
                     </div>
-                    <span>Implementing secure authentication and authorization mechanisms</span>
+                    <span>Debugging complex integration issues between frontend and backend systems</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-color-3 flex items-center justify-center text-bg-primary flex-shrink-0 mt-1">
+                      <span className="text-xs">04</span>
+                    </div>
+                    <span>Optimizing database queries for better performance</span>
                   </li>
                 </ul>
               </div>
@@ -193,29 +199,38 @@ const Week6 = () => {
                 </div>
               </div>
 
+              <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Next.js Migration & TypeScript Implementation</h2>
+
+              <p className="text-base text-color-2 mb-8 leading-relaxed">
+                One of the major challenges this week was migrating our project to the Next.js tech stack. This decision was primarily made because our backend developer was experiencing significant difficulties connecting Laravel and React.js together. The integration issues between these technologies were causing development delays and technical roadblocks. By migrating to Next.js, we aimed to solve these connection problems while also leveraging Next.js's server-side rendering capabilities, improved routing, and better performance optimization. Although challenging, this migration provided an excellent opportunity to learn and implement modern web development practices.
+              </p>
+
+              <p className="text-base text-color-2 mb-8 leading-relaxed">
+                Alongside the Next.js migration, we also incorporated TypeScript into our codebase. Learning TypeScript was initially challenging, but it quickly proved valuable for catching type-related errors early in the development process and improving code maintainability through better documentation and intellisense support.
+              </p>
+
               <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Problem-Solving Approach</h2>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                Our approach to problem-solving involved breaking down complex issues into smaller, manageable components. We used a combination of pair programming, code reviews, and regular team discussions to identify and resolve issues efficiently.
+                Our approach to problem-solving involved breaking down complex issues into smaller, manageable components. We used a combination of pair programming, code reviews, and regular team discussions to identify and resolve issues efficiently. For the Next.js migration specifically, we created a step-by-step plan to gradually move components and functionality over to the new framework.
               </p>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                One particularly challenging issue involved optimizing the performance of our database queries. By analyzing query execution plans and implementing appropriate indexes, we were able to significantly improve the application's response time.
+                When implementing TypeScript, we started by adding type definitions to our most critical components and gradually expanded coverage throughout the codebase. This incremental approach allowed us to maintain functionality while improving type safety.
               </p>
-
-              <blockquote className="border-l-2 border-color-3 pl-4 py-2 my-6 bg-bg-tertiary/30 italic">
-                "We cannot solve our problems with the same thinking we used when we created them."
-                <cite className="block text-color-3 mt-2 not-italic">— Albert Einstein</cite>
-              </blockquote>
 
               <h2 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary">Lessons Learned</h2>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                This week taught me the importance of systematic problem-solving and the value of collaborative approaches. I learned that even the most complex technical challenges can be overcome with persistence, creativity, and teamwork.
+                This week taught me the importance of systematic problem-solving and the value of collaborative approaches. I learned that even the most complex technical challenges can be overcome with persistence, creativity, and teamwork. The Next.js migration and TypeScript implementation significantly expanded my technical skills and understanding of modern web development frameworks.
               </p>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                Moving forward, I'll be applying these problem-solving techniques to other aspects of the project, particularly as we prepare for the mid-internship review in the coming week.
+                Learning TypeScript has been particularly valuable, as it has improved my understanding of type systems and how they can enhance code quality and developer experience. I'm now more confident in working with strongly-typed languages and appreciate the benefits they bring to large-scale applications.
+              </p>
+
+              <p className="text-base text-color-2 mb-8 leading-relaxed">
+                Moving forward, I'll be applying these new skills and problem-solving techniques to other aspects of the project, particularly as we continue to enhance our application with the improved tech stack.
               </p>
             </article>
           </div>
