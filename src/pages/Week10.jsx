@@ -5,8 +5,7 @@ import WeekNavButton from '../components/WeekNavButton';
 import Footer from '../components/Footer';
 import { Calendar, Clock, User, Tag, ArrowUp, BookOpen, Code, Coffee } from 'lucide-react';
 import Week10Image1 from '../assets/Week10/week10.1.jpg';
-import Week10Image3 from '../assets/Week10/week10.7.jpg';
-import Week10Image4 from '../assets/Week10/week10.6.JPG';
+import Week10Image3 from '../assets/Week10/week10.3.jpg';
 
 
 const Week10 = () => {
@@ -228,7 +227,7 @@ const Week10 = () => {
 
               <div className="grid grid-cols-1 gap-6 my-8">
                 <div className="bg-bg-tertiary/30 border-l border-t border-color-3 overflow-hidden">
-                  <img src={Week10Image4} alt="IT Admin Development" className="w-full h-64 object-cover" />
+                  <img src={Week10Image1} alt="IT Admin Development" className="w-full h-64 object-cover" />
                   <div className="p-4">
                     <h4 className="text-lg font-bold text-color-1 mb-2">IT Admin Dashboard</h4>
                     <p className="text-sm text-color-2">Developing the frontend interfaces for IT administrators.</p>
