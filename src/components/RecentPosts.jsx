@@ -18,113 +18,113 @@ import Week11Image from '../assets/Week10/week10.5.JPG';
 const posts = [
   {
     week: 'Week 1',
-    title: 'Getting Started',
-    excerpt: 'My first week of internship - orientation, team meetings, and Assigned Projects',
+    title: 'First Week Orientation',
+    excerpt: 'Wireframing and prototyping of the possible design of our knowledge management portal for our client.',
     image: Thumbnail1,
     link: '/week1',
     date: 'February 24-28 2025',
-    author: 'Intern',
-    category: 'Orientation'
+    author: 'Kenneth Espela',
+    category: 'Week 1'
   },
   {
     week: 'Week 2',
     title: 'Project Progressions',
-    excerpt: 'Exploring my designing capabilities',
+    excerpt: 'Exploring my designing capabilities and continuing to develop wireframes for our knowledge management portal.',
     image: Thumbnail2,
     link: '/week2',
     date: 'March 3-7 2025',
-    author: 'Intern',
-    category: 'Wireframing & Development'
+    author: 'Kenneth Espela',
+    category: 'Week 2'
   },
   {
     week: 'Week 3',
     title: 'Learning New Skills',
-    excerpt: 'Diving deeper into development tools and methodologies',
+    excerpt: 'Diving deeper into development tools and methodologies while working on the knowledge management portal.',
     image: Week3Image,
     link: '/week3',
     date: 'March 10-14 2025',
-    author: 'Intern',
-    category: 'Development'
+    author: 'Kenneth Espela',
+    category: 'Week 3'
   },
   {
     week: 'Week 4',
-    title: 'Team Collaboration',
-    excerpt: 'Working with the team on collaborative projects and learning from peers',
+    title: 'Server Upgrades & Farewells',
+    excerpt: 'Learning technical server skills and celebrating team connections through a special farewell for a DOST-V employee.',
     image: Week4Image,
     link: '/week4',
     date: 'March 17-21 2025',
-    author: 'Intern',
-    category: 'Teamwork'
+    author: 'Kenneth Espela',
+    category: 'Week 4'
   },
   {
     week: 'Week 5',
-    title: 'Project Milestones',
-    excerpt: 'Reaching important milestones in my assigned projects',
+    title: 'Employee Dashboard',
+    excerpt: 'Frontend development of the employee dashboard and progress report meetings with the project manager.',
     image: Week5Image,
     link: '/week5',
     date: 'March 24-28 2025',
-    author: 'Intern',
-    category: 'Project Management'
+    author: 'Kenneth Espela',
+    category: 'Week 5'
   },
   {
     week: 'Week 6',
-    title: 'Problem Solving',
-    excerpt: 'Tackling challenges and finding innovative solutions',
+    title: 'Next.js Migration',
+    excerpt: 'Facing challenges with migrating to Next.js tech stack and learning TypeScript for our project.',
     image: Week6Image,
     link: '/week6',
     date: 'March 31-Apr 4 2025',
-    author: 'Intern',
-    category: 'Problem Solving'
+    author: 'Kenneth Espela',
+    category: 'Week 6'
   },
   {
     week: 'Week 7',
-    title: 'Mid-Internship Review',
-    excerpt: 'Reflecting on progress and setting goals for the second half',
+    title: 'Employee Side Development',
+    excerpt: 'Learning more about Next.js, developing the employee side, and making UI/UX adjustments to improve user experience.',
     image: Week7Image,
     link: '/week7',
     date: 'April 7-11 2025',
-    author: 'Intern',
-    category: 'Evaluation'
+    author: 'Kenneth Espela',
+    category: 'Week 7'
   },
   {
     week: 'Week 8',
-    title: 'Advanced Techniques',
-    excerpt: 'Learning and implementing advanced development techniques',
+    title: 'HR Frontend & PC Maintenance',
+    excerpt: 'Starting frontend development for the HR side and participating in PC maintenance and troubleshooting activities.',
     image: Week8Image,
     link: '/week8',
     date: 'April 14-18 2025',
-    author: 'Intern',
-    category: 'Technical Skills'
+    author: 'Kenneth Espela',
+    category: 'Week 8'
   },
   {
     week: 'Week 9',
-    title: 'Project Leadership',
-    excerpt: 'Taking on leadership responsibilities in team projects',
+    title: 'HR Frontend & Event Tech',
+    excerpt: 'Developing HR interfaces and preparing for the DOST-V Innovation Summit during my ninth week.',
     image: Week9Image,
     link: '/week9',
     date: 'April 21-25 2025',
-    author: 'Intern',
-    category: 'Leadership'
+    author: 'Kenneth Espela',
+    category: 'Week 9'
   },
   {
     week: 'Week 10',
-    title: 'Final Project Phase',
-    excerpt: 'Working on the final phase of my internship projects',
+    title: 'Innovation Summit & IT Admin',
+    excerpt: 'Attending the Innovation Summit event and developing the IT admin side frontend with pages for each menu item.',
     image: Week10Image,
     link: '/week10',
     date: 'April 28-May 2 2025',
-    author: 'Intern',
-    category: 'Project Completion'
+    author: 'Kenneth Espela',
+    category: 'Week 10'
   },
   {
     week: 'Week 11',
-    title: 'Wrapping Up',
-    excerpt: 'Completing final tasks and reflecting on the entire internship experience',
+    title: 'UI/UX Adjustments',
+    excerpt: 'Making final UI/UX adjustments and completing the internship project before wrapping up the experience.',
     image: Week11Image,
     link: '/week11',
     date: 'May 5-9 2025',
-    author: 'Intern',
-    category: 'Conclusion'
+    author: 'Kenneth Espela',
+    category: 'Week 11'
   }
 ];
 
@@ -143,9 +143,9 @@ const PostCard = ({ post }) => {
 
       {/* Category tag */}
       <div className="absolute top-4 left-4 z-10">
-        <span className="flex items-center gap-1.5 text-white/90">
-          <Tag size={16} className="text-white/90" />
-          <span className="text-sm">{post.category}</span>
+        <span className="flex items-center gap-1.5 text-white/90 bg-black/50 px-2 py-1 backdrop-blur-sm">
+          <Tag size={16} className="text-color-3" />
+          <span className="text-sm font-medium">{post.category}</span>
         </span>
       </div>
 
@@ -158,19 +158,25 @@ const PostCard = ({ post }) => {
         <p className="text-sm text-white/80 mb-6 line-clamp-2">{post.excerpt}</p>
 
         {/* Footer with date and view button */}
-        <div className="flex justify-between items-center">l
+        <div className="flex justify-between items-center">
           {/* Date */}
-          <div className="flex items-center gap-2">
-            <Clock size={14} className="text-white/70" />
-            <span className="text-xs text-white/70">{post.date}</span>
+          <div className="flex flex-col gap-1">
+            <div className="flex items-center gap-2">
+              <Clock size={14} className="text-white/70" />
+              <span className="text-xs text-white/70">{post.date}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <User size={14} className="text-color-3" />
+              <span className="text-xs text-white/70">{post.author}</span>
+            </div>
           </div>
 
           {/* View button */}
-          <div className="inline-flex items-center gap-1 cursor-pointer">
+          <div className="inline-flex items-center gap-1 cursor-pointer bg-color-3/20 px-2 py-1 hover:bg-color-3/40 transition-all duration-normal">
             <span className="text-xs font-medium text-white">VIEW</span>
             <ArrowRight
               size={14}
-              className="text-white"
+              className="text-white group-hover:translate-x-1 transition-transform duration-normal"
             />
           </div>
         </div>
