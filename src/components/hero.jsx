@@ -8,6 +8,11 @@ const Hero = () => {
   const [currentWeekIndex, setCurrentWeekIndex] = useState(2); // Start with Week 3 (index 2)
   const heroRef = useRef(null);
 
+  // State to track if user has manually interacted with carousel
+  const [userInteracted, setUserInteracted] = useState(false);
+  // Timer to reset user interaction state
+  const interactionTimerRef = useRef(null);
+
   // Mouse position for interactive background (desktop only)
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -124,6 +129,39 @@ const Hero = () => {
     }
   ];
 
+  // Add automatic carousel functionality
+  useEffect(() => {
+    // Auto-advance carousel every 5 seconds if user hasn't interacted
+    const carouselInterval = setInterval(() => {
+      if (!userInteracted) {
+        setCurrentWeekIndex(prev => (prev === weeks.length - 1 ? 0 : prev + 1));
+      }
+    }, 5000); // Change week every 5 seconds
+
+    return () => {
+      clearInterval(carouselInterval);
+    };
+  }, [userInteracted]);
+
+  // Function to handle user interaction with carousel
+  const handleCarouselInteraction = (newIndex) => {
+    // Set the new week index
+    setCurrentWeekIndex(newIndex);
+
+    // Mark that user has interacted with carousel
+    setUserInteracted(true);
+
+    // Clear any existing timer
+    if (interactionTimerRef.current) {
+      clearTimeout(interactionTimerRef.current);
+    }
+
+    // Reset interaction state after 10 seconds of inactivity
+    interactionTimerRef.current = setTimeout(() => {
+      setUserInteracted(false);
+    }, 10000);
+  };
+
   useEffect(() => {
     // Trigger animations after component mounts
     const timer = setTimeout(() => {
@@ -150,6 +188,7 @@ const Hero = () => {
     return () => {
       clearTimeout(timer);
       clearInterval(textInterval);
+      clearTimeout(interactionTimerRef.current);
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
@@ -315,7 +354,7 @@ const Hero = () => {
                     <motion.button
                       whileHover={{ scale: 1.05, x: -2 }}
                       whileTap={{ scale: 0.95 }}
-                      onClick={() => setCurrentWeekIndex(prev => (prev === 0 ? weeks.length - 1 : prev - 1))}
+                      onClick={() => handleCarouselInteraction(currentWeekIndex === 0 ? weeks.length - 1 : currentWeekIndex - 1)}
                       className="text-white/70 text-[10px] sm:text-xs flex items-center gap-1 hover:text-white cursor-pointer"
                     >
                       <ArrowRight size={10} className="rotate-180" />
@@ -325,7 +364,11 @@ const Hero = () => {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      onClick={() => window.location.href = weeks[currentWeekIndex].path}
+                      onClick={() => {
+                        // Mark as interacted before navigating
+                        setUserInteracted(true);
+                        window.location.href = weeks[currentWeekIndex].path;
+                      }}
                       className="bg-color-3 text-black px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-medium flex items-center gap-1 cursor-pointer"
                     >
                       <span>VIEW WEEK</span>
@@ -335,7 +378,7 @@ const Hero = () => {
                     <motion.button
                       whileHover={{ scale: 1.05, x: 2 }}
                       whileTap={{ scale: 0.95 }}
-                      onClick={() => setCurrentWeekIndex(prev => (prev === weeks.length - 1 ? 0 : prev + 1))}
+                      onClick={() => handleCarouselInteraction(currentWeekIndex === weeks.length - 1 ? 0 : currentWeekIndex + 1)}
                       className="text-white/70 text-[10px] sm:text-xs flex items-center gap-1 hover:text-white cursor-pointer"
                     >
                       <span>NEXT</span>
@@ -349,7 +392,12 @@ const Hero = () => {
             {/* Progress bar - Ultra compact for all screens */}
             <div className="pt-2 border-t border-white/20">
               <div className="flex justify-between text-[10px] sm:text-xs mb-1.5">
-                <span className="text-white/60">PROGRESS</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-white/60">PROGRESS</span>
+                  {!userInteracted && (
+                    <span className="text-[8px] text-color-3 px-1 py-0.5 border border-color-3/50 animate-pulse">AUTO</span>
+                  )}
+                </div>
                 <span className="text-color-3">WEEK {currentWeekIndex + 1} OF 11</span>
               </div>
               <div className="w-full h-0.5 bg-white/10 overflow-hidden">
