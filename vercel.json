@@ -1,5 +1,26 @@
 {
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  ],
+  "routes": [
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/week1", "dest": "/index.html" },
+    { "src": "/week2", "dest": "/index.html" },
+    { "src": "/week3", "dest": "/index.html" },
+    { "src": "/week4", "dest": "/index.html" },
+    { "src": "/week5", "dest": "/index.html" },
+    { "src": "/week6", "dest": "/index.html" },
+    { "src": "/week7", "dest": "/index.html" },
+    { "src": "/week8", "dest": "/index.html" },
+    { "src": "/week9", "dest": "/index.html" },
+    { "src": "/week10", "dest": "/index.html" },
+    { "src": "/week11", "dest": "/index.html" },
+    { "src": "/static/(.*)", "dest": "/static/$1" },
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/favicon.ico", "dest": "/favicon.ico" },
+    { "src": "/manifest.json", "dest": "/manifest.json" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "status": 404, "dest": "/index.html" }
+  ],
+  "trailingSlash": false
 }
