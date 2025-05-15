@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import { Calendar, Clock, User, Tag, ArrowUp, BookOpen, Code, Coffee } from 'lucide-react';
 import Week10Image1 from '../assets/Week10/week10.1.jpg';
 import Week10Image3 from '../assets/Week10/week10.7.jpg';
-import Week10Image4 from '../assets/Week10/week10.6.JPG';
+import Week10Image4 from '../assets/Week10/week10.6.jpg';
 
 
 const Week10 = () => {
@@ -237,10 +237,6 @@ const Week10 = () => {
 
               </div>
 
-              <blockquote className="border-l-2 border-color-3 pl-4 py-2 my-6 bg-bg-tertiary/30 italic">
-                "The best way to learn is through hands-on experience and real-world challenges."
-                <cite className="block text-color-3 mt-2 not-italic">— Tech Mentor</cite>
-              </blockquote>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
                 Week 10 has been an incredibly diverse and enriching experience. The Innovation Summit provided me with valuable exposure to event technical management, while the IT admin development work allowed me to continue expanding my frontend development skills. Both experiences have contributed significantly to my professional growth during this internship.
