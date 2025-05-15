@@ -164,11 +164,6 @@ const Footer = () => {
               <ArrowUp size={16} className="group-hover:-translate-y-1 transition-transform duration-normal group-hover:scale-110" />
             </button>
 
-            <div className="flex items-center text-color-2 bg-bg-tertiary p-2">
-              <span className="mr-1">MADE WITH</span>
-              <Heart size={16} className="text-color-3 animate-pulse-slow mx-1" />
-              <span>AND REACT</span>
-            </div>
           </div>
         </div>
       </div>
