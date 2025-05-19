@@ -58,7 +58,7 @@ const Week11 = () => {
           {/* Hero Section */}
           <div className={`relative h-[550px] overflow-hidden border-l border-t border-color-3 shadow-card transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <img
-              src={Week11Image1}
+              src={Week11Image2}
               alt="Week 11 - Wrapping Up"
               className="w-full h-full object-cover"
             />
@@ -121,7 +121,7 @@ const Week11 = () => {
                   <h3 className="text-lg font-bold text-color-1 mb-4 font-secondary">Weekly Navigation</h3>
                   <div className="space-y-3">
                     <WeekNavButton to="/week10" direction="prev" label="Previous Week" />
-                    <WeekNavButton to="/" direction="next" label="Back to Home" />
+                    <WeekNavButton to="/week12" direction="next" label="Next Week" />
                   </div>
                 </div>
               </div>

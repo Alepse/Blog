@@ -37,6 +37,7 @@ const Footer = () => {
     { path: '/week9', label: 'Week 9', dates: 'Apr 21-25' },
     { path: '/week10', label: 'Week 10', dates: 'Apr 28-May 2' },
     { path: '/week11', label: 'Week 11', dates: 'May 5-9' },
+    { path: '/week12', label: 'Week 12', dates: 'May 12-16' },
   ];
 
   const socialLinks = [
@@ -54,7 +55,7 @@ const Footer = () => {
           {/* Column 1: About */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold font-secondary text-color-1 mb-4 bg-color-3 inline-block px-4 py-1">INTERNSHIP BLOG</h3>
-         
+
             <p className="text-color-2 border-l-2 border-color-3 pl-4 py-2 bg-bg-tertiary/30">
               Follow my journey through this internship experience as I learn, grow, and contribute to meaningful projects.
             </p>

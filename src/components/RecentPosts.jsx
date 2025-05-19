@@ -13,8 +13,9 @@ import Week8Image from '../assets/Week8/week8.1.jpg';
 import Week9Image from '../assets/Week9/week9.1.jpg';
 import Week10Image from '../assets/Week10/week10.1.jpg';
 import Week11Image from '../assets/Week10/week10.5.JPG';
+import Week12Image from '../assets/Week12/week12.1.png';
 
-// All 11 weeks of internship
+// All 12 weeks of internship
 const posts = [
   {
     week: 'Week 1',
@@ -125,6 +126,16 @@ const posts = [
     date: 'May 5-9 2025',
     author: 'Kenneth Espela',
     category: 'Week 11'
+  },
+  {
+    week: 'Week 12',
+    title: 'Final Debugging & UI Polishing',
+    excerpt: 'Debugging and fine-tuning UI/UX components in the HR and IT admin interfaces to ensure a polished final product.',
+    image: Week12Image,
+    link: '/week12',
+    date: 'May 12-16 2025',
+    author: 'Kenneth Espela',
+    category: 'Week 12'
   }
 ];
 
