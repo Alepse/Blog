@@ -13,7 +13,7 @@ import Week8Image from '../assets/Week8/week8.1.jpg';
 import Week9Image from '../assets/Week9/week9.1.jpg';
 import Week10Image from '../assets/Week10/week10.1.jpg';
 import Week11Image from '../assets/Week10/week10.5.JPG';
-import Week12Image from '../assets/Week12/week12.1.png';
+import Week12Image from '../assets/Week12/week12.1.jpg';
 
 // All 12 weeks of internship
 const posts = [
