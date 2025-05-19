@@ -4,7 +4,7 @@ import Nav from '../components/nav';
 import WeekNavButton from '../components/WeekNavButton';
 import Footer from '../components/Footer';
 import { Calendar, Clock, User, Tag, ArrowUp, BookOpen, Code, Bug, Settings } from 'lucide-react';
-import Week12Image from '../assets/Week12/week12.1.png';
+import Week12Image from '../assets/Week11/week11.1.jpg';
 
 const Week12 = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);

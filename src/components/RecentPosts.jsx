@@ -129,7 +129,7 @@ const posts = [
   },
   {
     week: 'Week 12',
-    title: 'Final Debugging & UI Polishing',
+    title: 'Debugging & UI Polishing',
     excerpt: 'Debugging and fine-tuning UI/UX components in the HR and IT admin interfaces to ensure a polished final product.',
     image: Week12Image,
     link: '/week12',
