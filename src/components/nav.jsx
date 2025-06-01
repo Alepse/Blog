@@ -73,6 +73,7 @@ const Nav = () => {
     { path: '/week10', label: 'Week 10', dates: 'Apr 28-May 2' },
     { path: '/week11', label: 'Week 11', dates: 'May 5-9' },
     { path: '/week12', label: 'Week 12', dates: 'May 12-16' },
+    { path: '/week13', label: 'Week 13', dates: 'May 19-23' },
   ];
 
   const navLinks = [

@@ -3,10 +3,11 @@ import { useLocation } from 'react-router-dom';
 import Nav from '../components/nav';
 import WeekNavButton from '../components/WeekNavButton';
 import Footer from '../components/Footer';
-import { Calendar, Clock, User, Tag, ArrowUp, BookOpen, Code, Bug, Settings } from 'lucide-react';
-import Week12Image from '../assets/Week12/Week12.1.jpg';
+import { Calendar, Clock, User, Tag, ArrowUp, BookOpen, Code, Bug, Settings, Database } from 'lucide-react';
+// You'll need to add a Week13 image to your assets folder
+import Week13Image from '../assets/Week13/week13.jpg';
 
-const Week12 = () => {
+const Week13 = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const location = useLocation();
@@ -56,8 +57,8 @@ const Week12 = () => {
           {/* Hero Section */}
           <div className={`relative h-[550px] overflow-hidden border-l border-t border-color-3 shadow-card transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <img
-              src={Week12Image}
-              alt="Week 12 - Final Debugging"
+              src={Week13Image}
+              alt="Week 13 - UI Adjustments & API Integration"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
@@ -69,18 +70,18 @@ const Week12 = () => {
             <div className="absolute bottom-0 left-0 right-0 p-8">
               <div className="flex flex-wrap gap-3 mb-4">
                 <span className="inline-block px-3 py-1 bg-color-3 text-bg-primary text-sm font-bold mb-4 border-l-2 border-b-2 border-bg-primary animate-fadeIn">
-                  Week 12
+                  Week 13
                 </span>
                 <span className="inline-block px-4 py-1 bg-bg-tertiary/50 backdrop-blur-sm text-color-1 text-sm animate-fadeIn" style={{ animationDelay: '0.2s' }}>
                   <Calendar className="inline-block w-4 h-4 mr-1" />
-                  May 12-16, 2025
+                  May 19-23, 2025
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-color-1 mb-3 font-secondary animate-fadeIn" style={{ animationDelay: '0.3s' }}>
-                Debugging & UI Polishing
+                UI Refinement & API Integration
               </h1>
               <p className="text-color-2 max-w-2xl animate-fadeIn" style={{ animationDelay: '0.4s' }}>
-                Debugging and fine-tuning UI/UX components in the HR and IT admin interfaces to ensure a polished final product.
+                Fine-tuning the Employee Dashboard UI and debugging API integrations to ensure seamless data flow and user experience.
               </p>
             </div>
           </div>
@@ -101,14 +102,14 @@ const Week12 = () => {
                       <Calendar className="mr-2 text-color-3 mt-1" size={16} />
                       <div>
                         <span className="block text-sm font-medium text-color-1">Date</span>
-                        <span className="text-sm text-color-2">May 12-16, 2025</span>
+                        <span className="text-sm text-color-2">May 19-23, 2025</span>
                       </div>
                     </li>
                     <li className="flex items-start">
-                      <Bug className="mr-2 text-color-3 mt-1" size={16} />
+                      <Database className="mr-2 text-color-3 mt-1" size={16} />
                       <div>
                         <span className="block text-sm font-medium text-color-1">Focus</span>
-                        <span className="text-sm text-color-2">Debugging & UI/UX Refinement</span>
+                        <span className="text-sm text-color-2">UI Refinement & API Integration</span>
                       </div>
                     </li>
                   </ul>
@@ -118,7 +119,7 @@ const Week12 = () => {
                 <div className="bg-bg-secondary p-6 border-l border-t border-color-3 shadow-card">
                   <h3 className="text-lg font-bold text-color-1 mb-4 font-secondary">Weekly Navigation</h3>
                   <div className="space-y-3">
-                    <WeekNavButton to="/week11" direction="prev" label="Previous Week" />
+                    <WeekNavButton to="/week12" direction="prev" label="Previous Week" />
                     <WeekNavButton to="/" direction="next" label="Back to Home" />
                   </div>
                 </div>
@@ -138,7 +139,7 @@ const Week12 = () => {
                 </div>
                 <div className="flex items-center gap-1">
                   <Bug size={16} className="text-color-3" />
-                  <span>Debugging</span>
+                  <span>API Integration</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <Settings size={16} className="text-color-3" />
@@ -148,96 +149,81 @@ const Week12 = () => {
 
               <div className="mb-10 bg-gradient-to-r from-bg-tertiary/80 to-transparent p-6 border-l-2 border-color-3 rounded-r-md">
                 <p className="text-lg text-color-1 leading-relaxed">
-                  In Week 12, I focused on debugging and fine-tuning the UI/UX components in both the HR and IT admin interfaces to prepare for the final phase of the project.
+                  In Week 13, I focused on refining the Employee Dashboard UI components and debugging API integrations to ensure a seamless user experience and reliable data flow.
                 </p>
               </div>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                Week 12 marked the penultimate week of my internship journey. With most of the development work completed, this week was dedicated to identifying and fixing bugs, improving user interface elements, and ensuring a consistent user experience across all parts of the application. I worked closely with the team to address feedback and make necessary adjustments before moving into the final week of the project.
+                Following the debugging and UI polishing work from Week 12, this week was dedicated to making final adjustments to the Employee Dashboard interface and resolving API integration issues. Working closely with the backend team, I identified and fixed several data synchronization problems and optimized the UI for better performance and usability.
               </p>
 
               <h3 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary relative pl-4 border-l-2 border-color-3">
-                <span className="bg-gradient-to-r from-color-3 to-color-3/50 bg-clip-text text-transparent">Debugging HR Interface Components</span>
+                <span className="bg-gradient-to-r from-color-3 to-color-3/50 bg-clip-text text-transparent">Employee Dashboard UI Refinements</span>
               </h3>
 
               <div className="bg-bg-tertiary/50 p-8 my-10 border-l-2 border-color-3 rounded-r-md shadow-soft">
                 <ul className="space-y-4 text-color-2 text-base list-disc pl-5">
                   <li className="pl-2">
-                    <span>Fixed responsive layout issues in the employee management dashboard</span>
+                    <span>Enhanced responsive design for better mobile and tablet experiences</span>
                   </li>
                   <li className="pl-2">
-                    <span>Resolved data loading and display bugs in HR analytics components</span>
+                    <span>Improved data visualization components for employee performance metrics</span>
                   </li>
                   <li className="pl-2">
-                    <span>Improved form validation and error handling in employee data entry forms</span>
+                    <span>Refined notification system UI for better user engagement</span>
                   </li>
                   <li className="pl-2">
-                    <span>Enhanced navigation and menu interactions for better user flow</span>
+                    <span>Implemented accessibility improvements across all dashboard components</span>
                   </li>
                 </ul>
               </div>
 
               <h3 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary relative pl-4 border-l-2 border-color-3">
-                <span className="bg-gradient-to-r from-color-3 to-color-3/50 bg-clip-text text-transparent">UI/UX Refinements in IT Admin Interface</span>
-              </h3>
-
-              <p className="text-base text-color-2 mb-8 leading-relaxed">
-                The IT admin interface required several UI/UX adjustments to improve usability and visual consistency. I focused on creating a more intuitive experience while maintaining the design language established throughout the application.
-              </p>
-
-              <div className="bg-bg-tertiary/50 p-8 my-10 border-l-2 border-color-3 rounded-r-md shadow-soft">
-                <ul className="space-y-4 text-color-2 text-base list-disc pl-5">
-                  <li className="pl-2">
-                    <span>Standardized button styles and interactive elements across all admin pages</span>
-                  </li>
-                  <li className="pl-2">
-                    <span>Improved dashboard layout for better information hierarchy and readability</span>
-                  </li>
-                  <li className="pl-2">
-                    <span>Enhanced data visualization components with better color contrast and accessibility</span>
-                  </li>
-                  <li className="pl-2">
-                    <span>Refined animation and transition effects for a more polished user experience</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-bg-tertiary/50 p-8 my-10 border-l-2 border-color-3 rounded-r-md shadow-soft">
-                <ul className="space-y-4 text-color-2 text-base list-disc pl-5">
-                  <li className="pl-2">
-                    <span><strong className="text-color-1 font-medium">HR Interface Debugging:</strong> Identifying and fixing issues in the HR dashboard components.</span>
-                  </li>
-                  <li className="pl-2">
-                    <span><strong className="text-color-1 font-medium">IT Admin UI Refinements:</strong> Polishing the user interface for the IT administration section.</span>
-                  </li>
-                  <li className="pl-2">
-                    <span><strong className="text-color-1 font-medium">Publication Approvals:</strong> Debugging and refining the publication approval workflow in both interfaces.</span>
-                  </li>
-                  <li className="pl-2">
-                    <span><strong className="text-color-1 font-medium">Dashboard Components:</strong> Ensuring consistent UI elements and responsive behavior across all dashboard sections.</span>
-                  </li>
-                </ul>
-              </div>
-
-              <h3 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary relative pl-4 border-l-2 border-color-3">
-                <span className="bg-gradient-to-r from-color-3 to-color-3/50 bg-clip-text text-transparent">Cross-Browser Testing and Optimization</span>
+                <span className="bg-gradient-to-r from-color-3 to-color-3/50 bg-clip-text text-transparent">API Integration Debugging</span>
               </h3>
 
               <p className="text-base text-color-2 mb-8 leading-relaxed">
-                To ensure a consistent experience across different browsers and devices, I conducted thorough testing and made necessary adjustments. This involved checking for rendering issues, performance bottlenecks, and interaction inconsistencies across various platforms.
+                The Employee Dashboard relies heavily on API integrations to display real-time data. This week, I focused on identifying and resolving several critical issues affecting data synchronization and display.
               </p>
 
               <div className="bg-bg-tertiary/50 p-8 my-10 border-l-2 border-color-3 rounded-r-md shadow-soft">
                 <ul className="space-y-4 text-color-2 text-base list-disc pl-5">
+                  <li className="pl-2">
+                    <span><strong className="text-color-1 font-medium">Data Fetching Optimization:</strong> Implemented better error handling and loading states for API requests.</span>
+                  </li>
+                  <li className="pl-2">
+                    <span><strong className="text-color-1 font-medium">Real-time Updates:</strong> Fixed WebSocket connection issues for live data updates.</span>
+                  </li>
+                  <li className="pl-2">
+                    <span><strong className="text-color-1 font-medium">Authentication Flow:</strong> Resolved token refresh issues causing intermittent API failures.</span>
+                  </li>
+                  <li className="pl-2">
+                    <span><strong className="text-color-1 font-medium">Data Caching:</strong> Implemented efficient caching strategies to reduce API calls and improve performance.</span>
+                  </li>
+                </ul>
+              </div>
 
+              <h3 className="text-2xl font-bold text-color-1 mt-12 mb-6 font-secondary relative pl-4 border-l-2 border-color-3">
+                <span className="bg-gradient-to-r from-color-3 to-color-3/50 bg-clip-text text-transparent">Performance Optimization</span>
+              </h3>
+
+              <p className="text-base text-color-2 mb-8 leading-relaxed">
+                Beyond visual refinements and API fixes, I also focused on optimizing the overall performance of the Employee Dashboard to ensure a smooth user experience even with large datasets.
+              </p>
+
+              <div className="bg-bg-tertiary/50 p-8 my-10 border-l-2 border-color-3 rounded-r-md shadow-soft">
+                <ul className="space-y-4 text-color-2 text-base list-disc pl-5">
                   <li className="pl-2">
-                    <span>Verified responsive behavior across desktop, tablet, and mobile viewports</span>
+                    <span>Implemented virtualized lists for handling large data sets efficiently</span>
                   </li>
                   <li className="pl-2">
-                    <span>Improved loading performance by optimizing component rendering</span>
+                    <span>Optimized component rendering to reduce unnecessary re-renders</span>
                   </li>
                   <li className="pl-2">
-                    <span>Addressed accessibility concerns to ensure inclusive user experience</span>
+                    <span>Added lazy loading for dashboard modules to improve initial load time</span>
+                  </li>
+                  <li className="pl-2">
+                    <span>Refined state management to prevent memory leaks and improve stability</span>
                   </li>
                 </ul>
               </div>
@@ -246,36 +232,32 @@ const Week12 = () => {
                 <span className="bg-gradient-to-r from-color-3 to-color-3/50 bg-clip-text text-transparent">Final Reflections</span>
               </h3>
 
-              <div className="bg-gradient-to-b from-bg-tertiary/30 to-transparent p-6 rounded-md border-l-2 border-color-3 mb-8">
-                <p className="text-base text-color-2 leading-relaxed">
-                  As my internship comes to a close with this final week, I'm grateful for the opportunity to have contributed to this project from start to finish. The debugging and UI/UX refinement work during Week 12 allowed me to apply all the skills I've developed throughout my internship while ensuring the delivery of a high-quality product.
-                </p>
+              <p className="text-base text-color-2 mb-8 leading-relaxed">
+                Week 13 represented the culmination of our efforts to create a robust, user-friendly Employee Dashboard. By addressing UI refinements and API integration issues, we've delivered a polished product that meets both functional requirements and user expectations. The collaborative approach between frontend and backend teams was crucial in identifying and resolving complex integration challenges.
+              </p>
 
-                <div className="mt-6 pt-6 border-t border-white/10">
-                  <p className="text-base text-color-2 leading-relaxed">
-                    Working on the HR and IT admin interfaces has given me valuable experience in frontend development, debugging, and user experience design. I've learned the importance of attention to detail, cross-browser compatibility, and creating intuitive user interfaces. These skills will undoubtedly serve me well in my future career as a developer.
-                  </p>
-                </div>
-              </div>
+              <p className="text-base text-color-2 mb-8 leading-relaxed">
+                As we prepare for the final handover, I'm confident that the Employee Dashboard will provide significant value to the organization, offering intuitive access to critical information and streamlining day-to-day operations for employees across all departments.
+              </p>
             </article>
           </div>
         </div>
       </main>
 
-      <Footer />
-
       {/* Scroll to top button */}
-      {showScrollTop && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 p-4 bg-color-3 text-bg-primary rounded-full shadow-elevated hover:bg-color-accent-2 transition-all duration-normal hover:scale-110 z-40 border-l border-t border-bg-primary cursor-pointer"
-          aria-label="Scroll to top"
-        >
-          <ArrowUp size={24} />
-        </button>
-      )}
+      <button
+        onClick={scrollToTop}
+        className={`fixed right-8 bottom-8 bg-color-3 text-bg-primary p-3 rounded-full shadow-lg transition-all duration-300 ${
+          showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
+        }`}
+        aria-label="Scroll to top"
+      >
+        <ArrowUp size={20} />
+      </button>
+
+      <Footer />
     </div>
   );
 };
 
-export default Week12;
+export default Week13;

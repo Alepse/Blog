@@ -14,6 +14,7 @@ import Week9Image from '../assets/Week9/week9.1.jpg';
 import Week10Image from '../assets/Week10/week10.1.jpg';
 import Week11Image from '../assets/Week10/week10.5.JPG';
 import Week12Image from '../assets/Week12/Week12.1.jpg';
+import Week13Image from '../assets/Week13/week13.jpg';
 
 // All 12 weeks of internship
 const posts = [
@@ -136,6 +137,16 @@ const posts = [
     date: 'May 12-16 2025',
     author: 'Kenneth Espela',
     category: 'Week 12'
+  },
+  {
+    week: 'Week 13',
+    title: 'UI Refinement & API Integration',
+    excerpt: 'Fine-tuning the Employee Dashboard UI and debugging API integrations to ensure seamless data flow and user experience.',
+    image: Week13Image,
+    link: '/week13',
+    date: 'May 19-23 2025',
+    author: 'Kenneth Espela',
+    category: 'Week 13'
   }
 ];
 

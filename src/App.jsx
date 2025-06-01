@@ -13,6 +13,7 @@ import Week9 from './pages/Week9';
 import Week10 from './pages/Week10';
 import Week11 from './pages/Week11';
 import Week12 from './pages/Week12';
+import Week13 from './pages/Week13';
 
 // ScrollToTop component to handle scrolling on route change
 function ScrollToTop() {
@@ -44,6 +45,7 @@ const App = () => {
           <Route path="/week10" element={<Week10 />} />
           <Route path="/week11" element={<Week11 />} />
           <Route path="/week12" element={<Week12 />} />
+          <Route path="/week13" element={<Week13 />} />
         </Routes>
       </Router>
     </div>
