@@ -126,6 +126,20 @@ const Hero = () => {
       date: "May 5-9, 2025",
       path: "/week11",
       category: "Conclusion"
+    },
+    {
+      number: 12,
+      title: "Debugging & UI Polishing",
+      date: "May 12-16, 2025",
+      path: "/week12",
+      category: "Quality Assurance"
+    },
+    {
+      number: 13,
+      title: "UI Refinement & API Integration",
+      date: "May 19-23, 2025",
+      path: "/week13",
+      category: "Final Delivery"
     }
   ];
 
@@ -275,7 +289,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-sm sm:text-base text-white/80 max-w-xl leading-relaxed"
             >
-              Follow my 11-week professional development journey as I document my growth,
+              Follow my 13-week professional development journey as I document my growth,
               challenges, and achievements during this transformative internship experience.
             </motion.p>
 
@@ -398,12 +412,12 @@ const Hero = () => {
                     <span className="text-[8px] text-color-3 px-1 py-0.5 border border-color-3/50 animate-pulse">AUTO</span>
                   )}
                 </div>
-                <span className="text-color-3">WEEK {currentWeekIndex + 1} OF 11</span>
+                <span className="text-color-3">WEEK {currentWeekIndex + 1} OF 13</span>
               </div>
               <div className="w-full h-0.5 bg-white/10 overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
-                  animate={{ width: `${((currentWeekIndex + 1) / 11) * 100}%` }}
+                  animate={{ width: `${((currentWeekIndex + 1) / 13) * 100}%` }}
                   transition={{ duration: 0.5 }}
                   className="h-full bg-color-3"
                 ></motion.div>
